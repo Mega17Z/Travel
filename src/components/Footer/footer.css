@@ -1,0 +1,63 @@
+.footerSection{
+    margin-top: 2rem;
+    background-color: #040265;
+    color: white;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.leFooter{
+    width: 90%;
+    margin: auto;
+    padding: 1rem 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.leFooter .bloc{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.bloc.travleCompany{
+    width: 300px;
+}
+
+.travleCompany p{
+    font-size: 14px;
+}
+
+.bloc h2, .bloc h3{
+    margin-bottom: 10px;
+}
+
+.bloc ul{
+    list-style: none;
+    margin-left: 5px;
+}
+
+.bloc ul li{
+    position: relative;
+}
+
+.bloc ul li:before{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: -10px;
+    width: 3px;
+    height: 2px;
+    background-color: whitesmoke;
+}
+
+.reseaux{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reseaux svg{
+    font-size: 20px;
+}
