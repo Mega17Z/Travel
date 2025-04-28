@@ -22,7 +22,7 @@ const Navbar = () => {
         </li>
       </ul>
       <form className="d-flex" role="search">
-        <button className="btn"  style={{backgroundColor: #04}}>Connexion</button>
+        <button className="btn">Connexion</button>
       </form>
     </div>
   </div>
