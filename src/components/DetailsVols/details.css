@@ -1,0 +1,60 @@
+.details{
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+}
+
+.details .partDetails{
+    width: 100%;
+    padding: 10px;
+    background-color: #040265;
+}
+
+.details .informations{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.informations .infos,
+.informations .infos-d{
+    color: #040265;
+}
+
+.infos-d{
+    text-align: right;
+}
+
+.barre{
+    width: 60%;
+    height: 2px;
+    background-color: #040265;
+}
+
+.supplementaire{
+    margin: 15px 0;
+    color: #040265;
+}
+
+.supplementaire h4{
+    margin-bottom: 5px;
+}
+
+.supplementaire .titre{
+    text-decoration: underline;
+    opacity: 0.7;
+}
+
+.supplementaire .valeur{
+    font-size: 16px;
+}
+
+.connfirmer{
+    display: flex;
+    gap: 15px;
+}
+
+.connfirmer button{
+    background-color: #040265;
+}
