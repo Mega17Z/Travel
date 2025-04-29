@@ -2,6 +2,8 @@ import './decouvertes.css'
 import avion from '../../assets/avion.jpg'
 import france from '../../assets/france.jpg'
 import rio from '../../assets/rio.jpg'
+import interieur from '../../assets/interieur.jpg'
+
 
 const Decouvertes = () => {
     return ( 
@@ -16,6 +18,9 @@ const Decouvertes = () => {
                 </div>
                 <div className="card">
                     <img src={rio} alt="" />
+                </div>
+                <div className="card">
+                    <img src={interieur} alt="" />
                 </div>
             </div>
             <button>Decouvertes</button>
