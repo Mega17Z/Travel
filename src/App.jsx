@@ -1,11 +1,11 @@
 import './App.css'
-import Footer from './components/Footer/footer'
+import MonAccueil from './FirstPage'
 
 function App() {
 
   return (
     <>
-      <Footer />
+      <MonAccueil />
     </>
   )
 }
