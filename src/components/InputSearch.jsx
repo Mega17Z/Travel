@@ -11,6 +11,7 @@ const InputSearch = () => {
             placeholder="Recherche de Vols..."
             aria-label="Search"
           />
+          <i className="bi bi-search"></i>
         </form>
       </div>
     </div>
