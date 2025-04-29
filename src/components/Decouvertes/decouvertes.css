@@ -56,6 +56,17 @@
     border-radius: 5px;
 }
 
+/* .sectionDecouve button{
+    background-color: #040265;
+} */
+
 .sectionDecouve button{
     background-color: #040265;
+    border-radius: 10px;
+    padding: 0 15px;
+    padding: 10px;
+    color: white;
+    font-size: 17px;
+    border: none;
+    outline: none;
 }

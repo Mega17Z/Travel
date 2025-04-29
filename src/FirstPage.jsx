@@ -1,15 +1,19 @@
 import Decouvertes from "./components/Decouvertes/decouvertes";
-import Foot from "./components/Footer/foot";
+// import Foot from "./components/Footer/foot";
 import Footer from "./components/Footer/footer";
 import RechercheVols from "./components/rechercheVol/rechercheVol";
+// import Navbar from "./components/Navbar";
+import InputSearch from "./components/InputSearch"
 
 const MonAccueil = () => {
     return ( 
         <div>
+            {/* <Navbar /> */}
+            <InputSearch />
             <RechercheVols />
             <Decouvertes />
             <Footer />
-            <Foot />
+            {/* <Foot /> */}
         </div>
      );
 }
