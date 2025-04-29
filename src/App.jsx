@@ -12,6 +12,8 @@ import Reservation from './Reservation'
 import MainTravel from './components/MainTravel'
 
 
+import "./App.css";
+import Vols from "./Components/travelCard/vols";
 
 function App() {
 
@@ -27,8 +29,10 @@ function App() {
      {/* <MainTravel/> */}
      </Routes>
      </BrowserRouter>
+     <Vols />
     </>
   )
+
 }
 
-export default App
+export default App;
