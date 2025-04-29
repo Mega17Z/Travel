@@ -1,8 +1,10 @@
 import React from 'react'
 import InputSearch from './InputSearch'
+import './navbar.css'
+
 const MainTravel = () => {
   return (
-    <div className='container-fluid' style={{height: 580}}>
+    <div style={{width: '100%', height: 580}}>
         <InputSearch/>
     <div className='image mt-4'>
        <div className='d-flex justify-content-center align-items-center flex-column text-travel text-center'>

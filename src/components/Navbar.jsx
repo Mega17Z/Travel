@@ -26,7 +26,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto gap-5  mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className={({isActive}) => {"nav-link" + (isActive) ? "text-white" : "text-blue" }}  to="/"  style={ ({isActive}) => ({backgroundColor: isActive ? '#040265' : '#f1f1f1', color: isActive ? "white" : "#040265"})}>
+                <NavLink className={({isActive}) => {"" + (isActive) ? "text-white" : "text-blue" }}  to="/"  style={ ({isActive}) => ({backgroundColor: isActive ? '#040265' : '#f1f1f1', color: isActive ? "white" : "#040265"})}>
                 Accueil
                 </NavLink>
               </li>

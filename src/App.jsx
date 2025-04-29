@@ -9,11 +9,11 @@ import Reservation from './Reservation'
 // import InputSearch from './components/InputSearch'
 // import MainTravel from './components/MainTravel'
 
-import MainTravel from './components/MainTravel'
+// import MainTravel from './components/MainTravel'
 
 
-import "./App.css";
-import Vols from "./Components/travelCard/vols";
+import Details from './AfficheDetaiils'
+// import Vols from "./Components/travelCard/vols";
 
 function App() {
 
@@ -25,14 +25,13 @@ function App() {
       <Route path='/' element={<MonAccueil />} />
       <Route path='/ListesVol' element={<LesVols />} />
       <Route path='/Reservation' element={<Reservation />} />
+      <Route path='' element={<Details />} />
      {/* <InputSearch/> */}
      {/* <MainTravel/> */}
      </Routes>
      </BrowserRouter>
-     <Vols />
     </>
   )
-
 }
 
 export default App;
