@@ -2,7 +2,7 @@ import React from "react";
 import CarteVoyage from "./carteVoyage";
 import DiscoverMore from "./button";
 
-const vols = () => {
+const Vols = () => {
   return (
     <div className="p-0 m-0">
       <h2 className="border-l-7 border-blue-800 ps-2 w-fit text-2xl">
@@ -14,4 +14,4 @@ const vols = () => {
   );
 };
 
-export default vols;
+export default Vols;
