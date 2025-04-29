@@ -9,6 +9,8 @@ import Reservation from './Reservation'
 // import InputSearch from './components/InputSearch'
 // import MainTravel from './components/MainTravel'
 
+import MainTravel from './components/MainTravel'
+
 
 
 function App() {

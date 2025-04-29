@@ -17,4 +17,33 @@ body{
     border: 1px solid #040265 !important;
     margin: auto;
     max-width: 50%;
+    font-family: "Roboto", sans-serif;
+    color: rgb(252, 246, 246);
+}
+i{
+    font-size: 1.5rem;
+    position: relative;
+    right: 22rem;
+    top: 1.5rem;
+}
+.image{
+    background: url('/unsplash_p9vr45T2scg.png') center center  
+    no-repeat;
+    background-size: cover;
+    /* opacity: 0.7; */
+    width: 70%;
+    margin: auto;
+    height: 500px;
+    /* marg; */
+}
+
+@media screen and (max-width: 768px) {
+
+    i{  
+        position: relative;
+        right: 10rem;
+        top: 1.5rem;
+    }
+    
+
 }
