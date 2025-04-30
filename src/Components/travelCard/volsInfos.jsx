@@ -11,7 +11,7 @@ const volsInfos = ({
 }) => {
   return (
     <div className="row flex-column flex-md-row">
-      <div className="col-12 col-md-10 row align-items-center justify-content-around gap-2 border-end border-5 m-0 p-0 p-md-0">
+      <div className="col-12 col-md-10 row align-items-center justify-content-around gap-2 border-md-end border-5 m-0 p-0 p-md-0">
         <div className="col-12">
           <p
             style={{
