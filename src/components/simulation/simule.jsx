@@ -4,12 +4,10 @@ import "./simule.css"
 
 const CardSimule = ({tableau}) => {
 
-    // const {aeroportArrivee,aeroportDepart,heureArrivee,heureDepart,id,paysArrivee,paysDepart} = tableau
-
     return ( 
         <div className="cardSimule">
             <h3 className="titre">Nos Vols</h3>
-            {tableau.map((vol) => (<ContainerVols
+            {tableau.map((vol, index) => (<ContainerVols
              C={vol.numeroVol}
              Ad={vol.aeroportDepart}
              AA={vol.aeroportArrivee} 
@@ -18,6 +16,7 @@ const CardSimule = ({tableau}) => {
              id={vol.id}
              Pd={vol.paysDepart}
              Pa={vol.paysArrivee}
+             key={vol.id ?? index}
             />))}
         </div>
      );

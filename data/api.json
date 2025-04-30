@@ -54,6 +54,17 @@
         "heureArrivee": "2025-05-05T13:00:00",
         "duree": "3h00",
         "prix": 250
+      },
+      {
+        "numeroVol": "SN601",
+        "paysDepart": "Dakar",
+        "aeroportDepart": "Dakar Blaise Diagne (DSS)",
+        "heureDepart": "2025-05-05T10:00:00",
+        "paysArrivee": "Maroc",
+        "aeroportArrivee": "Casablanca (CMN)",
+        "heureArrivee": "2025-05-05T13:00:00",
+        "duree": "3h00",
+        "prix": 250
       }
     ]
   }

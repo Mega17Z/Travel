@@ -9,17 +9,10 @@ import RechercheVols from "./components/rechercheVol/rechercheVol";
 import MainTravel from "./components/MainTravel";
 import CardSimule from "./components/simulation/simule";
 import { useEffect, useState } from "react";
+import useAffichageVols from "./components/useVols";
 
 const MonAccueil = () => {
-    const [lesCard, setCards] = useState([])
-
-    useEffect(() => {
-        fetch('http://localhost:9000/vols')
-        .then(res => res.json())
-        .then(donner => {
-            setCards(donner.slice(0, 3))
-        })
-    }, [])
+    const { vols } = useAffichageVols(3)
 
     return ( 
         <div>
@@ -28,7 +21,7 @@ const MonAccueil = () => {
             <MainTravel />
             <RechercheVols />
             <Decouvertes />
-            <CardSimule tableau={lesCard} />
+            <CardSimule tableau={vols} />
             {/* <Vols /> */}
             <Footer />
             {/* <Foot /> */}
