@@ -10,23 +10,25 @@ import MainTravel from "./components/MainTravel";
 import CardSimule from "./components/simulation/simule";
 import { useEffect, useState } from "react";
 import useAffichageVols from "./components/useVols";
+import Vols from "./Components/travelCard/vols";
 
 const MonAccueil = () => {
     const { vols } = useAffichageVols(3)
 
-    return ( 
-        <div>
-            {/* <Navbar /> */}
-            {/* <InputSearch /> */}
-            <MainTravel />
-            <RechercheVols />
-            <Decouvertes />
+  return (
+    <div>
+      {/* <Navbar /> */}
+      {/* <InputSearch /> */}
+      <MainTravel />
+      <RechercheVols />
+      <Decouvertes />
             <CardSimule tableau={vols} />
             {/* <Vols /> */}
-            <Footer />
-            {/* <Foot /> */}
-        </div>
-     );
-}
- 
+      <Vols />
+      <Footer />
+      {/* <Foot /> */}
+    </div>
+  );
+};
+
 export default MonAccueil;
