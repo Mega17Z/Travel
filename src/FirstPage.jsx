@@ -7,10 +7,12 @@ import RechercheVols from "./components/rechercheVol/rechercheVol";
 // import Navbar from "./components/Navbar";
 // import InputSearch from "./components/InputSearch"
 import MainTravel from "./components/MainTravel";
-import CardSimule from "./components/simulation/simule";
-import { useEffect, useState } from "react";
+// import CardSimule from "./components/simulation/simule";
+// import { useEffect, useState } from "react";
 import useAffichageVols from "./components/useVols";
-import Vols from "./Components/travelCard/vols";
+import Vols from "./components/travelCard/vols";
+// import Vols from "./Components/travelCard/Vols";
+// import DetailsVols from "./components/DetailsVols/details";
 
 const MonAccueil = () => {
     const { vols } = useAffichageVols(3)
@@ -22,9 +24,11 @@ const MonAccueil = () => {
       <MainTravel />
       <RechercheVols />
       <Decouvertes />
-            <CardSimule tableau={vols} />
+            {/* <CardSimule tableau={vols} /> */}
             {/* <Vols /> */}
-      <Vols />
+      {/* <Vols tableau={vols} /> */}
+      {/* <DetailsVols /> */}
+      <Vols tableau={vols} />
       <Footer />
       {/* <Foot /> */}
     </div>
