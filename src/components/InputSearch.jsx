@@ -2,7 +2,7 @@ import React from "react";
 
 const InputSearch = () => {
   return (
-    <div style={{backgroundColor: '#f1f1f1'}}>
+    <div>
       <div className="container" >
         <form className="d-flex" role="search">
           <input

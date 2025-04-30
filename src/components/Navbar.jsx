@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom"
+import './navbar.css'
 
 const Navbar = () => {
   return (
@@ -24,17 +26,17 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto gap-5  mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link text-white"  href="#"  style={{backgroundColor: '#040265'}}>
+                <NavLink className={({isActive}) => {"" + (isActive) ? "text-white" : "text-blue" }}  to="/"  style={ ({isActive}) => ({backgroundColor: isActive ? '#040265' : '#f1f1f1', color: isActive ? "white" : "#040265"})}>
                 Accueil
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" style={{backgroundColor: '#f1f1f1', color: '#040265'}}>
+                <NavLink className={({isActive}) => {"nav-link" + (isActive) ? "text-white" : "text-blue" }} to="/ListesVol" style={ ({isActive}) => ({backgroundColor: isActive ? '#040265' : '#f1f1f1', color: isActive ? "white" : "#040265"})}>
                  Listes des Vols 
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link " style={{backgroundColor: '#f1f1f1' ,color: '#040265'}}>Reservations</a>
+                <NavLink className={({isActive}) => {"nav-link" + (isActive) ? "text-white" : "text-blue" }} to="/Reservation" style={ ({isActive}) => ({backgroundColor: isActive ? '#040265' : '#f1f1f1', color: isActive ? "white" : "#040265"})}>Reservations</NavLink>
               </li>
             </ul>
             <form className="d-flex" role="search">

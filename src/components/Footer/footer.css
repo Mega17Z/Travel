@@ -35,6 +35,7 @@
 .bloc ul{
     list-style: none;
     margin-left: 5px;
+    padding-left: 0;
 }
 
 .bloc ul li{
@@ -60,4 +61,27 @@
 
 .reseaux svg{
     font-size: 20px;
+}
+
+@media (max-width: 400px){
+    .bloc.travleCompany{
+        width: 350px !important;
+    }
+    .leFooter .bloc{
+        width: 145px;
+    }
+}
+
+
+
+/* FootPage */
+
+.footPage{
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #040265;
+    height: 10vh;
 }
