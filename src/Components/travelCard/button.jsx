@@ -1,8 +1,14 @@
 import React from "react";
+import "./Card.css";
 
 const discoverMore = ({ texte }) => {
   return (
-    <button className="bg-blue-800 text-white p-2 rounded font-bold">
+    <button
+      style={{
+        width: "fit-content",
+      }}
+      className="btn p-2 rounded-3"
+    >
       {texte}
     </button>
   );

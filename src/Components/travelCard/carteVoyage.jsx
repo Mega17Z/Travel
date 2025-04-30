@@ -3,7 +3,7 @@ import VolInfo from "./volsInfos";
 
 const carteVoyage = () => {
   return (
-    <div className="bg-white shadow-md my-5 p-3 rounded-md">
+    <div className="shadow py-2 px-2 rounded">
       <VolInfo
         departLieu="Dakar"
         arriveLieu="Paris"

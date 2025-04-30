@@ -10,25 +10,34 @@ const volsInfos = ({
   arriveHeure,
 }) => {
   return (
-    <div className="flex sm:flex-wrap flex-wrap justify-center">
-      <div className="flex justify-between items-center sm:border-r w-[85%] border-r-0">
-        <div className="flex flex-col justify-center text-start w-[12%] min-w-[105px]">
-          <p className="text-blue-800 border-b-3 w-fit pb-1 font-bold mb-1">
+    <div className="row flex-column flex-md-row">
+      <div className="col-12 col-md-10 row align-items-center justify-content-around gap-2 border-end border-5 m-0 p-0 p-md-0">
+        <div className="col-12">
+          <p
+            style={{
+              width: "fit-content",
+              position: "relative",
+              // right: "60px",
+            }}
+            className="mb-3 mb-md-0 text-primary border-bottom border-3 border-primary fw-bolder fs-5 m-auto text1"
+          >
             Air Senegal
           </p>
-          <p>Depart</p>
-          <p>
+        </div>
+        <div className="col-4 col-md-2 text-center text-primary p-0">
+          <p className="primary bg-primary text-light rounded">Depart</p>
+          <p className="text">
             {departLieu},{departPays}
           </p>
-          <p>{departHeure}</p>
+          <p className="text">{departHeure}</p>
         </div>
-        <div className="border-blue-800 border min-w-[20px] w-[65%] mt-10"></div>
-        <div className="flex flex-col justify-center mt-8 text-end w-[12%] mr-5 min-w-[90px]">
-          <p>Arrivée</p>
-          <p>
+        <div className="col-1 border hr"></div>
+        <div className="col-4 col-md-2 text-center text-primary">
+          <p className="primary bg-primary text-light rounded">Arrivée</p>
+          <p className="text">
             {arriveLieu},{arrivePays}
           </p>
-          <p>{arriveHeure}</p>
+          <p className="text">{arriveHeure}</p>
         </div>
       </div>
       <Reserve places="18" />
