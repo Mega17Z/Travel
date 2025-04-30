@@ -25,7 +25,7 @@ function App() {
       <Route path='/' element={<MonAccueil />} />
       <Route path='/ListesVol' element={<LesVols />} />
       <Route path='/Reservation' element={<Reservation />} />
-      <Route path='' element={<Details />} />
+      <Route path='/AfficheDetaiils/id:' element={<Details />} />
      {/* <InputSearch/> */}
      {/* <MainTravel/> */}
      </Routes>
