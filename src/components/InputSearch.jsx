@@ -8,19 +8,19 @@ const InputSearch = () => {
   const navigate =useNavigate()
 
   useEffect(() =>{
-   fetch('http://localhost:9000/vols')
+   fetch('http://localhost:9000/vols.json')
    .then((res) => res.json()) 
    .then((donnes) => setVols(donnes) )
-   .catch((err) => console.error(err))
+   .catch((err) => console.error('Erreur API',err))
   }, []);
 
   const handleRecherche = () => {
-    const paysExistant = vols.some(
+    const resultats = vols.filter(
       (vol) => vol.pays.toLowerCase() === recherche.toLocaleLowerCase()
     )
 
-    if(paysExistant){
-      navigate(`/vols/${recherche.toLocaleLowerCase()}`)
+    if(resultats.length > 0){
+      navigate('/listesVol', {state : {pays: recherche, vols: resultats} })
     }else{
       alert('Aucun vol trouvé pour ce pays')
     }
