@@ -7,20 +7,22 @@ import RechercheVols from "./components/rechercheVol/rechercheVol";
 // import Navbar from "./components/Navbar";
 // import InputSearch from "./components/InputSearch"
 import MainTravel from "./components/MainTravel";
+import Vols from "./Components/travelCard/vols";
 
 const MonAccueil = () => {
-    return ( 
-        <div>
-            {/* <Navbar /> */}
-            {/* <InputSearch /> */}
-            <MainTravel />
-            <RechercheVols />
-            <Decouvertes />
+  return (
+    <div>
+      {/* <Navbar /> */}
+      {/* <InputSearch /> */}
+      <MainTravel />
+      <RechercheVols />
+      <Decouvertes />
             {/* <Vols /> */}
-            <Footer />
-            {/* <Foot /> */}
-        </div>
-     );
-}
- 
+      <Vols />
+      <Footer />
+      {/* <Foot /> */}
+    </div>
+  );
+};
+
 export default MonAccueil;
