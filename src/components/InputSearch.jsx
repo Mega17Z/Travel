@@ -1,27 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { data } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const InputSearch = () => {
      
   const [vols, setVols] = useState([])
   const [recherche, setRecherche] = useState("")
-  const [resultFiltre, setResultFiltre] = useState([])
+  const navigate =useNavigate()
 
   useEffect(() =>{
    fetch('http://localhost:9000/vols')
-   .then((res) => {
-    if(!res.ok){
-       throw new Error('Erreur réseau')
-    }
-    return res.json()
-   }) 
-   .then((data) =>{
-    setVols(data)
-   })
-   .catch((error) =>{
-    console.error('Erreur lors du fetch des vols :' , error)
-   })
-  }, [])
+   .then((res) => res.json()) 
+   .then((donnes) => setVols(donnes) )
+   .catch((err) => console.error(err))
+  }, []);
+
+  
 
   return (
     <div>
