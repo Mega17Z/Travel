@@ -14,7 +14,17 @@ const InputSearch = () => {
    .catch((err) => console.error(err))
   }, []);
 
-  
+  const handleRecherche = () => {
+    const paysExistant = vols.some(
+      (vol) => vol.pays.toLowerCase() === recherche.toLocaleLowerCase()
+    )
+
+    if(paysExistant){
+      navigate(`/vols/${recherche.toLocaleLowerCase()}`)
+    }else{
+      alert('Aucun vol trouvé pour ce pays')
+    }
+  }
 
   return (
     <div>
@@ -22,10 +32,12 @@ const InputSearch = () => {
         <form className="d-flex" role="search">
           <input
             className="form-control mt-4 bg-white rounded-5"
-            type="search"
+            type="text"
+            value={recherche}
+            onChange={(e) => setRecherche(e.target.value)}
             placeholder="Recherche de Vols..."
           />
-          <i className="bi bi-search"></i>
+          <i className="bi bi-search" onClick={handleRecherche}></i>
         </form>
       </div>
     </div>
