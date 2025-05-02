@@ -17,6 +17,7 @@ const MonAccueil = () => {
       <MainTravel />
       <RechercheVols />
       <Decouvertes />
+            {/* <Vols /> */}
       <Vols />
       <Footer />
       {/* <Foot /> */}
