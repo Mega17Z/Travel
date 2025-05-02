@@ -2,7 +2,7 @@ import React from "react";
 import Reserve from "./reserve";
 import { Link } from 'react-router-dom'
 
-const volsInfos = ({
+const VolsInfos = ({
   compagnie,
   departLieu,
   departPays,
@@ -49,4 +49,4 @@ const volsInfos = ({
   );
 };
 
-export default volsInfos;
+export default VolsInfos;

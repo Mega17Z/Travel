@@ -13,6 +13,7 @@ import InputSearch from './components/InputSearch'
 
 import Details from "./AfficheDetaiils";
 import FormProvider from "./Components/Formulaire/FormProvider";
+import Formulaire from "./Components/Formulaire/Formulaire";
 // import Vols from "./Components/travelCard/vols";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/ListesVol" element={<LesVols />} />
             <Route path="/Reservation" element={<Reservation />} />
             <Route path="/AfficheDetaiils/:id" element={<Details />} />
+            <Route path="/inscription" element={<Formulaire />} />
           </Routes>
           {/* <InputSearch/> */}
           {/* <MainTravel/> */}

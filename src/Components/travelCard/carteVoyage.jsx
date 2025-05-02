@@ -21,7 +21,8 @@ const CarteVoyage = ({ donner }) => {
           departHeure={vol.heureDepart}
           arriveHeure={vol.heureArrivee}
           id={vol.id}
-        />)
+        />
+      )
       })}
     </div>
   );

@@ -13,8 +13,8 @@ import useAffichageVols from "./components/useVols";
 import Vols from "./components/travelCard/vols";
 // import Vols from "./Components/travelCard/Vols";
 // import DetailsVols from "./components/DetailsVols/details";
-import Vols from "./Components/travelCard/vols";
-import Formulaire from "./Components/Formulaire/Formulaire";
+// import Vols from "./Components/travelCard/vols";
+// import Formulaire from "./Components/Formulaire/Formulaire";
 
 const MonAccueil = () => {
     const { vols } = useAffichageVols(3)
@@ -33,7 +33,7 @@ const MonAccueil = () => {
       <Vols tableau={vols} />
       {/* <Vols /> */}
       <Vols />
-      <Formulaire />
+      {/* <Formulaire /> */}
       <Footer />
       {/* <Foot /> */}
     </div>

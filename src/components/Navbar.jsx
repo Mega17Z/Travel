@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './navbar.css';
 
 const Navbar = () => {
-  const [utilisateur, setUtilisateur] = useState(null);
+  // const [utilisateur, setUtilisateur] = useState(null);
   
-  const data = JSON.parse(localStorage.getItem("utilisateur") || "null");
-  useEffect(() => {
-    fetch('http://localhost:6000/utilisateurs')
-    .then(res => res.json())
-    .then(donne => {
-      setUtilisateur(donne);
-    })
-  }, []);
+  // const data = JSON.parse(localStorage.getItem("utilisateur") || "null");
+  // useEffect(() => {
+  //   fetch('http://localhost:6000/utilisateurs')
+  //   .then(res => res.json())
+  //   .then(donne => {
+  //     setUtilisateur(donne);
+  //   })
+  // }, []);
 
-  const verification = (e) => {
-    e.preventDefault()
+  // const verification = (e) => {
+  //   e.preventDefault()
 
-    const filtre = utilisateur.filtre(e => e.id === data.id)
+  //   const filtre = utilisateur.filtre(e => e.id === data.id)
 
     
-  }
+  // }
 
   return (
     <div>
@@ -78,17 +78,19 @@ const Navbar = () => {
               </li>
             </ul>
             <form className="d-flex" role="search">
-              {utilisateur ? (
+              {/* {utilisateur ? (
                 <span className="text-primary fw-bold">Connecté</span>
-              ) : (
+              ) : ( */}
+                <Link to="/inscription">
                 <button
                   className="btn rounded-5 text-white"
                   style={{ backgroundColor: "#040265" }}
-                  onClick={verification}
+                  
                 >
                   Connexion
                 </button>
-              )}
+                </Link>
+              {/* )} */}
             </form>
           </div>
         </div>
