@@ -8,6 +8,7 @@ import RechercheVols from "./components/rechercheVol/rechercheVol";
 // import InputSearch from "./components/InputSearch"
 import MainTravel from "./components/MainTravel";
 import Vols from "./Components/travelCard/vols";
+import Formulaire from "./Components/Formulaire/Formulaire";
 
 const MonAccueil = () => {
   return (
@@ -17,8 +18,9 @@ const MonAccueil = () => {
       <MainTravel />
       <RechercheVols />
       <Decouvertes />
-            {/* <Vols /> */}
+      {/* <Vols /> */}
       <Vols />
+      <Formulaire />
       <Footer />
       {/* <Foot /> */}
     </div>
