@@ -30,9 +30,7 @@ const useAffichageVols = (limit = null) => {
   useEffect(() => {
     fetch(`https://api.aviationstack.com/v1/flights?access_key=b58bae2ccd71dc1ce231a67e97df4a93`)
       .then((res) => res.json())
-      .then((donner) => {
-        console.log(donner); // <- tu peux voir ici qu'il contient { pagination, data: [...] }
-    
+      .then((donner) => {    
         const volsData = donner.data || [];
     
         const volsFormatés = volsData.map((vol, index) => ({
