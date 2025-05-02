@@ -13,7 +13,7 @@ import Reservation from './Reservation'
 
 
 import Details from './AfficheDetaiils'
-import DetailsVols from './components/DetailsVols/details'
+// import DetailsVols from './components/DetailsVols/details'
 // import Vols from "./Components/travelCard/vols";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       <Route path='/' element={<MonAccueil />} />
       <Route path='/ListesVol' element={<LesVols />} />
       <Route path='/Reservation' element={<Reservation />} />
-      {/* <Route path='/AfficheDetaiils' element={<Details />} /> */}
+      <Route path='/AfficheDetaiils/:id' element={<Details />} />
       {/* <Route path='/details' element={<DetailsVols />} /> */}
       
      {/* <InputSearch/> */}

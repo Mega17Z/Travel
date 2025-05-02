@@ -1,0 +1,60 @@
+*{
+    margin-bottom: 0 !important;
+}
+
+.reservation{
+    width: 100%;
+    margin: 15px auto;
+    box-shadow: 2px 2px 5px #0402655e;
+    padding: 15px;
+    border: 1px solid #0402655e;
+}
+
+.reservation .infos{
+    background-color: #040265;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.company{
+    margin-top: 5px;
+}
+
+.company, .infosVols, .prix{
+    display: flex;
+    justify-content: space-between;
+}
+
+.prix{
+    width: 100%;
+    padding: 5px 0;
+    /* display: flex; */
+    align-items: flex-end;
+    /* gap: 20px; */
+    /* border-top: 1px solid #040265; */
+    border-bottom: 1px solid #040265;
+    /* background-color: #0402655e; */
+    color: #040265;
+    margin-top: 5px;
+}
+
+.prixDownload{
+    display: flex;
+    gap: 10px;
+}
+.prixDownload p{
+    position: relative;
+    bottom: -1px;
+}
+
+.prix a{
+    padding: 5px 10px;
+    background-color: #040265;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+}

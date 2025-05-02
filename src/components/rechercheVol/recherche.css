@@ -1,16 +1,16 @@
 .sectionVol{
     width: 90%;
-    margin: 25px auto;
+    margin: 4rem auto !important;
 }
 
-.sectionVol h2{
+.sectionVol h5{
     color: #040265;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
     position: relative;
     margin-left: 10px;
 }
 
-.sectionVol h2::before{
+.sectionVol h5::before{
     content: '';
     position: absolute;
     height: 90%;
@@ -26,20 +26,21 @@ form{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .part{
     padding: 5px;
     border-radius: 5px;
-    width: 300px;
+    width: 350px;
+    /* max-width: 450px; */
     display: flex;
+    /* background-color: #040265; */
     align-items: center;
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid black;
 }
 
-.part select,
 .part input{
     width: 100%;
     padding: 5px;

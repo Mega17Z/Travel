@@ -1,5 +1,5 @@
 import "./Recherche.css"
-import { FiExternalLink } from 'react-icons/fi';
+// import { FiExternalLink } from 'react-icons/fi';
 import { FaPlaneDeparture, FaPlaneArrival, FaUser } from 'react-icons/fa';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -17,15 +17,15 @@ const RechercheVols = () => {
 
     return ( 
         <div className="sectionVol">
-            <h2>Acheter un billet</h2>
+            <h5>Acheter un billet</h5>
             <form onSubmit={MyRecherche}>
-                <div className="part">
+                {/* <div className="part">
                     <FiExternalLink />
                     <select>
                         <option value="">Aller - Retour</option>
                         <option value="">Aller Simple</option>
                     </select>
-                </div>
+                </div> */}
                 <div className="part">
                     <FaPlaneDeparture />
                     <input type="text" placeholder="Départ" value={depart} onChange={(e) => setDepart(e.target.value)} />
@@ -34,11 +34,11 @@ const RechercheVols = () => {
                     <FaPlaneArrival />
                     <input type="text" placeholder="Destinations" value={destination} onChange={(e) => setDestinations(e.target.value)} />
                 </div>
-                <div className="part">
+                {/* <div className="part">
                     <input type="date" />
                     <input type="date" />
-                </div>
-                <div className="part">
+                </div> */}
+                {/* <div className="part">
                     <FaUser />
                     <select>
                         <option value="1">1 Personne</option>
@@ -51,7 +51,7 @@ const RechercheVols = () => {
                         <option value="8">8 Personnes</option>
                         <option value="9">9 Personnes</option>
                     </select>
-                </div>
+                </div> */}
                 <button type="submit">Recherche</button>
             </form>
         </div>

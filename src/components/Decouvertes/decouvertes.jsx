@@ -8,7 +8,7 @@ import interieur from '../../assets/interieur.jpg'
 const Decouvertes = () => {
     return ( 
         <div className="sectionDecouve">
-            <h2>Decouvertes</h2>
+            <h5>Decouvertes</h5>
             <div className="lesImages">
                 <div className="card">
                     <img src={avion} alt="" />

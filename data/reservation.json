@@ -1,0 +1,28 @@
+{
+  "reservation": [
+    {
+      "id": 1,
+      "numeroVol": "AF123",
+      "paysDepart": "France",
+      "aeroportDepart": "Charles de Gaulle (CDG)",
+      "heureDepart": "2025-05-01T08:30:00",
+      "paysArrivee": "États-Unis",
+      "aeroportArrivee": "John F. Kennedy (JFK)",
+      "heureArrivee": "2025-05-01T11:00:00",
+      "duree": "7h30",
+      "prix": 650
+    },
+    {
+      "id": 1,
+      "numeroVol": "AF123",
+      "paysDepart": "France",
+      "aeroportDepart": "Charles de Gaulle (CDG)",
+      "heureDepart": "2025-05-01T08:30:00",
+      "paysArrivee": "États-Unis",
+      "aeroportArrivee": "John F. Kennedy (JFK)",
+      "heureArrivee": "2025-05-01T11:00:00",
+      "duree": "7h30",
+      "prix": 650
+    }
+  ]
+}

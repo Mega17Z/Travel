@@ -9,16 +9,18 @@ const CarteVoyage = ({ donner }) => {
   return (
     <div className="shadow py-2 px-2 rounded">
       {donner.map((vol) => {
-        console.log(vol)
+        // console.log(vol)
         return (
         <VolInfo
           key={vol.id}
+          compagnie={vol.compagnie}
           departLieu={vol.aeroportDepart}
           arriveLieu={vol.aeroportArrivee}
           departPays={vol.paysDepart}
           arrivePays={vol.paysArrivee}
           departHeure={vol.heureDepart}
           arriveHeure={vol.heureArrivee}
+          id={vol.id}
         />)
       })}
     </div>
