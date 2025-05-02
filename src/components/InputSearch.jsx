@@ -7,7 +7,7 @@ const InputSearch = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:9000/vols")
+    fetch("https://api.aviationstack.com/v1/flights?access_key=b58bae2ccd71dc1ce231a67e97df4a93")
       .then((res) => res.json())
       .then((donnes) => {
         console.log("Données récupérées :", donnes)
