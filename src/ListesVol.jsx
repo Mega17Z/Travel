@@ -1,3 +1,5 @@
+import { useLocation, useNavigate } from "react-router-dom";
+
 // import { useEffect, useState } from "react";
 // import CardSimule from "./components/simulation/simule";
 import InputSearch from "./components/InputSearch";

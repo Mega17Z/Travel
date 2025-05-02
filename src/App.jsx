@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import LesVols from './ListesVol'
 import Reservation from './Reservation'
-// import InputSearch from './components/InputSearch'
+import InputSearch from './components/InputSearch'
 // import MainTravel from './components/MainTravel'
 
 // import MainTravel from './components/MainTravel'
@@ -24,7 +24,8 @@ function App() {
      <Navbar/>
      <Routes>
       <Route path='/' element={<MonAccueil />} />
-      <Route path='/ListesVol' element={<LesVols />} />
+      <Route path='/' element={<InputSearch/>}/>   
+      <Route path='/listesVol' element={<LesVols/>} />
       <Route path='/Reservation' element={<Reservation />} />
       <Route path='/AfficheDetaiils/:id' element={<Details />} />
       {/* <Route path='/details' element={<DetailsVols />} /> */}
@@ -32,6 +33,7 @@ function App() {
      {/* <InputSearch/> */}
      {/* <MainTravel/> */}
      </Routes>
+     
      </BrowserRouter>
     </>
   )

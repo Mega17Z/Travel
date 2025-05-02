@@ -1,6 +1,6 @@
-import React from 'react'
-import InputSearch from './InputSearch'
-import './navbar.css'
+import React from "react";
+import InputSearch from "./InputSearch";
+import "./navbar.css";
 
 const MainTravel = () => {
   return (
@@ -16,7 +16,7 @@ const MainTravel = () => {
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default MainTravel
+export default MainTravel;
