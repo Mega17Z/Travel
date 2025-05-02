@@ -17,19 +17,20 @@ const LesVols = () => {
     }
 
     return ( 
-        <div>
-          <h2>Vols vers {pays}</h2> 
-          <ul>
+        <div className="shadow rounded-4 mt-5" style={{width: '50%'}}>
+          <h2 className="text-center">{pays}</h2> 
+          <div>
             { vols.map((vol, index) => (
-                  <li key={index}>
-                   {vol.paysDepart}
-                    {vol.numeroVol} 
-                    {vol.heureDepart}
-                  </li>
+                  <div className="d-flex justify-content-center m-4" style={{flexDirection: 'column'}} key={index}>
+
+                     <p><strong style={{color: '#040265'}}>Départ : </strong>{vol.paysDepart}</p>
+                      <p> <strong style={{color: '#040265'}}>Numéro du Vol : </strong>{vol.numeroVol}</p> 
+                      <p><strong style={{color: '#040265'}}>Heure de départ : </strong>{vol.heureDepart}</p>
+                  </div>
 
                 ))}
-          </ul>
-          <button onClick={() => navigate('/')}>Nouvelle recherche</button>
+          </div>
+          <button onClick={() => navigate('/')} className="btn m-5 rounded-5">Nouvelle recherche</button>
         </div>
      );
 }

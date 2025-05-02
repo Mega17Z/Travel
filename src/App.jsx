@@ -24,11 +24,12 @@ function App() {
      <Routes>
       <Route path='/' element={<MonAccueil />} />
       <Route path='/' element={<InputSearch/>}/>   
-      <Route path='/ListesVol' element={<LesVols />} />
+      <Route path='/listesVol' element={<LesVols/>} />
       <Route path='/Reservation' element={<Reservation />} />
       <Route path='/AfficheDetaiils/id:' element={<Details />} />
      {/* <MainTravel/> */}
      </Routes>
+     
      </BrowserRouter>
     </>
   )
