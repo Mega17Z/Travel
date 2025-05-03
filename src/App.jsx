@@ -1,6 +1,8 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import MonAccueil from "./FirstPage";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,16 +14,17 @@ import Reservation from "./Reservation";
 // import MainTravel from './components/MainTravel'
 
 import Details from "./AfficheDetaiils";
-import FormProvider from "./Components/Formulaire/FormProvider";
-import Formulaire from "./Components/Formulaire/Formulaire";
+import Formulaire from "./components/Formulaire/Formulaire";
 import ConnexionPage from "./connexion";
+import Login from "./components/Formulaire/Login";
 // import Vols from "./Components/travelCard/vols";
 
 function App() {
   return (
     <>
+    <ToastContainer position="top-right" autoClose={3000}/>
       <BrowserRouter>
-        <FormProvider>
+       
           <Navbar />
           <Routes>
             <Route path="/" element={<MonAccueil />} />
@@ -29,11 +32,9 @@ function App() {
             <Route path="/Reservation" element={<Reservation />} />
             <Route path="/AfficheDetaiils/:id" element={<Details />} />
             <Route path="/inscription" element={<Formulaire />} />
-            <Route path="/connexion" element={<ConnexionPage />} />
           </Routes>
           {/* <InputSearch/> */}
           {/* <MainTravel/> */}
-        </FormProvider>
       </BrowserRouter>
     </>
   );

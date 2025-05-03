@@ -1,26 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
-import './navbar.css';
+// import React, { useState, useEffect } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import AuthContext from "../components/Formulaire/AuthContext";
+import "./navbar.css";
 
 const Navbar = () => {
-  // const [utilisateur, setUtilisateur] = useState(null);
-  
-  // const data = JSON.parse(localStorage.getItem("utilisateur") || "null");
-  // useEffect(() => {
-  //   fetch('http://localhost:6000/utilisateurs')
-  //   .then(res => res.json())
-  //   .then(donne => {
-  //     setUtilisateur(donne);
-  //   })
-  // }, []);
+  const { utilisateur, setUtilisateur } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  // const verification = (e) => {
-  //   e.preventDefault()
-
-  //   const filtre = utilisateur.filtre(e => e.id === data.id)
-
-    
-  // }
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setUtilisateur(null);
+    navigate("/login");
+  };
 
   return (
     <div>
@@ -48,7 +40,7 @@ const Navbar = () => {
                   to="/"
                   style={({ isActive }) => ({
                     backgroundColor: isActive ? "#040265" : "#f1f1f1",
-                    color: isActive ? "white" : "#040265"
+                    color: isActive ? "white" : "#040265",
                   })}
                 >
                   Accueil
@@ -59,7 +51,7 @@ const Navbar = () => {
                   to="/ListesVol"
                   style={({ isActive }) => ({
                     backgroundColor: isActive ? "#040265" : "#f1f1f1",
-                    color: isActive ? "white" : "#040265"
+                    color: isActive ? "white" : "#040265",
                   })}
                 >
                   Listes des Vols
@@ -70,28 +62,61 @@ const Navbar = () => {
                   to="/Reservation"
                   style={({ isActive }) => ({
                     backgroundColor: isActive ? "#040265" : "#f1f1f1",
-                    color: isActive ? "white" : "#040265"
+                    color: isActive ? "white" : "#040265",
                   })}
                 >
                   Reservations
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              {/* {utilisateur ? (
-                <span className="text-primary fw-bold">Connecté</span>
-              ) : ( */}
-                <Link to="/connexion">
-                <button
-                  className="btn rounded-5 text-white"
-                  style={{ backgroundColor: "#040265" }}
-                  
-                >
-                  Connexion
-                </button>
-                </Link>
-              {/* )} */}
-            </form>
+
+            <div className="d-flex align-items-center gap-3">
+              {utilisateur ? (
+                <div className="dropdown">
+                  <button
+                    className="btn btn-outline-primary dropdown-toggle"
+                    type="button"
+                    id="userDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    {utilisateur.prenom} {utilisateur.nom}
+                  </button>
+                  <ul
+                    className="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="userDropdown"
+                  >
+                    <li>
+                      <Link className="dropdown-item" to="/profil">
+                        Détails utilisateur
+                      </Link>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    <li>
+                      <button
+                        className="dropdown-item text-danger"
+                        onClick={handleLogout}
+                      >
+                        Déconnexion
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              ) : (
+                <>
+                  <Link to="/login">
+                    <button className="btn btn-outline-primary">
+                      Connexion
+                    </button>
+                  </Link>
+                  <Link to="/inscription">
+                    <button className="btn btn-primary">Inscription</button>
+                  </Link>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </nav>
