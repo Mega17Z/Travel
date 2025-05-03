@@ -4,10 +4,10 @@ import Form from "react-bootstrap/Form";
 import FormContext from "./FormContext";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const Formulaire = () => {
-  const { formData, updateFormData , resetFormData } = useContext(FormContext);
+  const { formData, updateFormData, resetFormData } = useContext(FormContext);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -23,14 +23,13 @@ const Formulaire = () => {
       toast.error("Veuillez remplir tous les champs.");
       return;
     }
-    
-  
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       toast.error("Adresse email invalide.");
       return;
     }
-    
+
     if (password.length < 6) {
       toast.error("Le mot de passe doit contenir au moins 6 caractères.");
       return;
@@ -48,7 +47,6 @@ const Formulaire = () => {
           email: formData.email,
           password: formData.password,
         }),
-        
       });
       console.log(formData);
 
@@ -65,7 +63,7 @@ const Formulaire = () => {
       console.error("Erreur lors de l'inscription :", error);
     }
   };
-  
+
   return (
     <Form
       onSubmit={handleSubmit}
@@ -82,7 +80,7 @@ const Formulaire = () => {
             style={{
               maxWidth: "100%",
             }}
-            className="m-0"
+            className="m-0 text-dark"
             name="prenom"
             value={formData.prenom || ""}
             onChange={handleChange}
@@ -96,7 +94,7 @@ const Formulaire = () => {
             style={{
               maxWidth: "100%",
             }}
-            className="m-0"
+            className="m-0 text-dark"
             name="nom"
             value={formData.nom || ""}
             onChange={handleChange}
@@ -112,7 +110,7 @@ const Formulaire = () => {
           style={{
             maxWidth: "100%",
           }}
-          className="m-0"
+          className="m-0 text-dark"
           name="email"
           value={formData.email || ""}
           onChange={handleChange}
@@ -127,7 +125,7 @@ const Formulaire = () => {
           style={{
             maxWidth: "100%",
           }}
-          className="m-0"
+          className="m-0 text-dark"
           name="password"
           value={formData.password || ""}
           onChange={handleChange}
@@ -140,7 +138,15 @@ const Formulaire = () => {
         Submit
       </Button>
 
-      <p className="mt-2" style={{fontSize: "15px", color: "#040265", textAlign: "center"}}>Connectez-vous si vous avez un compte: <Link to={"/Login"} style={{textDecoration: "underline"}}>Se connecter</Link></p>
+      <p
+        className="mt-2"
+        style={{ fontSize: "15px", color: "#040265", textAlign: "center" }}
+      >
+        Connectez-vous si vous avez un compte:{" "}
+        <Link to={"/Login"} style={{ textDecoration: "underline" }}>
+          Se connecter
+        </Link>
+      </p>
     </Form>
   );
 };

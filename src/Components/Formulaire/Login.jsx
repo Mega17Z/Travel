@@ -3,12 +3,12 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FormContext from "./FormContext";
 import { useNavigate } from "react-router-dom";
-import AuthContext from "./AuthContext"
+import AuthContext from "./AuthContext";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  const { formData, updateFormData , resetFormData} = useContext(FormContext);
+  const { formData, updateFormData, resetFormData } = useContext(FormContext);
   const { fetchProfil } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -40,9 +40,9 @@ const Login = () => {
       await fetchProfil();
       toast.success(" Connexion réussie !");
       resetFormData();
-      navigate("/"); 
+      navigate("/");
     } catch (error) {
-     toast.error("erreur de connection" + error.message);
+      toast.error("erreur de connection" + error.message);
       console.error("Erreur lors de la connexion :", error);
     }
   };
@@ -59,7 +59,7 @@ const Login = () => {
         <Form.Label>Email</Form.Label>
         <Form.Control
           style={{ maxWidth: "100%" }}
-          className="m-0"
+          className="m-0 text-dark"
           name="email"
           value={formData.email || ""}
           onChange={handleChange}
@@ -72,7 +72,7 @@ const Login = () => {
         <Form.Label>Mot de passe</Form.Label>
         <Form.Control
           style={{ maxWidth: "100%" }}
-          className="m-0"
+          className="m-0 text-dark"
           name="password"
           value={formData.password || ""}
           onChange={handleChange}
@@ -85,7 +85,15 @@ const Login = () => {
         Se connecter
       </Button>
 
-      <p className="mt-2" style={{fontSize: "15px", color: "#040265", textAlign: "center"}}>Inscrivez vous si vous n'avez pas de compte: <Link to={"/inscription"} style={{textDecoration: "underline"}}>S'inscrire</Link></p>
+      <p
+        className="mt-2"
+        style={{ fontSize: "15px", color: "#040265", textAlign: "center" }}
+      >
+        Inscrivez vous si vous n'avez pas de compte:{" "}
+        <Link to={"/inscription"} style={{ textDecoration: "underline" }}>
+          S'inscrire
+        </Link>
+      </p>
     </Form>
   );
 };

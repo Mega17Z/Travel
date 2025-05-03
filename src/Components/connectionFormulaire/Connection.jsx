@@ -30,7 +30,7 @@ const Connection = () => {
       <Form
         onSubmit={handleSubmit}
         style={{ maxWidth: "400px" }}
-        className="container shadow my-5 py-4 rounded flex-column"
+        className="bg-dark container shadow my-5 py-4 rounded flex-column"
       >
         <h2 className="text-center mb-4">Connexion</h2>
 
@@ -38,7 +38,7 @@ const Connection = () => {
           <Form.Label>Email</Form.Label>
           <Form.Control
             style={{
-              maxWidth: "100%",
+              maxWidth: "10%",
             }}
             className="m-0"
             type="email"
@@ -70,7 +70,15 @@ const Connection = () => {
           </Button>
         </div>
 
-        <p className="mt-2" style={{fontSize: "15px", color: "#040265", textAlign: "center"}}>Inscrivez vous si vous n'avez pas de compte: <Link to={"/inscription"} style={{textDecoration: "underline"}}>S'inscrire</Link></p>
+        <p
+          className="mt-2"
+          style={{ fontSize: "15px", color: "#040265", textAlign: "center" }}
+        >
+          Inscrivez vous si vous n'avez pas de compte:{" "}
+          <Link to={"/inscription"} style={{ textDecoration: "underline" }}>
+            S'inscrire
+          </Link>
+        </p>
       </Form>
     </div>
   );
