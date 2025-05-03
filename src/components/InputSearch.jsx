@@ -10,18 +10,19 @@ const InputSearch = () => {
     fetch("https://api.aviationstack.com/v1/flights?access_key=b58bae2ccd71dc1ce231a67e97df4a93")
       .then((res) => res.json())
       .then((donnes) => {
-        console.log("Données récupérées :", donnes)
-        setVols(donnes)})
+        console.log("Données complètes de l'API :", donnes)
+        setVols(donnes.data)
+      })
+        
       .catch((err) => console.error("Erreur API", err));
-  }, []);
+  });
 
   const handleRecherche = () => {
     const paysTape = recherche.toLowerCase().trim();
     const resultats = vols.filter(
       (vol) => vol.paysDepart?.toLowerCase().trim() === paysTape
     );
-
-    console.log(resultats)
+         
     
     if (resultats.length > 0) {
       navigate("/listesVol", { state: { pays: recherche, vols: resultats } });
