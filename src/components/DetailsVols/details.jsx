@@ -191,7 +191,7 @@ const DetailsVols = () => {
       };
 
     try {
-      const response = await fetch('http://192.168.68.194:3700/api/reservations', {
+      const response = await fetch('http://localhost:3700/api/reservations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

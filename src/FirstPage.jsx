@@ -32,7 +32,7 @@ const MonAccueil = () => {
       {/* <DetailsVols /> */}
       <Vols tableau={vols} />
       {/* <Vols /> */}
-      <Vols />
+      {/* <Vols /> */}
       {/* <Formulaire /> */}
       <Footer />
       {/* <Foot /> */}
