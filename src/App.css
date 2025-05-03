@@ -1,1 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.reserve{
+    width: 90%;
+    margin: auto;
+}
+
+.reserve h4{
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: #040265;
+}
+
+.reserve h4::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 3px;
+    height: 70%;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    background-color: #040265;
+    left: -10px;
+}

@@ -1,19 +1,31 @@
 import React from "react";
 import VolInfo from "./volsInfos";
 
-const carteVoyage = () => {
+const CarteVoyage = ({ donner }) => {
+  if (!Array.isArray(donner) || donner.length === 0) {
+    return <p>Aucun vol à afficher.</p>;
+  }
+
   return (
     <div className="shadow py-2 px-2 rounded">
-      <VolInfo
-        departLieu="Dakar"
-        arriveLieu="Paris"
-        departPays="Senegal"
-        arrivePays="France"
-        departHeure="20:00"
-        arriveHeure="03:00"
-      />
+      {donner.map((vol) => {
+        // console.log(vol)
+        return (
+        <VolInfo
+          key={vol.id}
+          compagnie={vol.compagnie}
+          departLieu={vol.aeroportDepart}
+          arriveLieu={vol.aeroportArrivee}
+          departPays={vol.paysDepart}
+          arrivePays={vol.paysArrivee}
+          departHeure={vol.heureDepart}
+          arriveHeure={vol.heureArrivee}
+          id={vol.id}
+        />
+      )
+      })}
     </div>
   );
 };
 
-export default carteVoyage;
+export default CarteVoyage;

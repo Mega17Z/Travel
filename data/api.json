@@ -1,4 +1,4 @@
-{
+ {
     "vols": [
       {
         "numeroVol": "AF123",
@@ -9,7 +9,8 @@
         "aeroportArrivee": "John F. Kennedy (JFK)",
         "heureArrivee": "2025-05-01T11:00:00",
         "duree": "7h30",
-        "prix": 650
+        "prix": 650,
+        "id": 1
       },
       {
         "numeroVol": "BA456",
@@ -20,7 +21,8 @@
         "aeroportArrivee": "Frankfurt (FRA)",
         "heureArrivee": "2025-05-02T15:45:00",
         "duree": "1h30",
-        "prix": 120
+        "prix": 120,
+        "id": 2
       },
       {
         "numeroVol": "DL789",
@@ -31,7 +33,8 @@
         "aeroportArrivee": "Tokyo Haneda (HND)",
         "heureArrivee": "2025-05-04T05:30:00",
         "duree": "11h30",
-        "prix": 900
+        "prix": 900,
+        "id": 3
       },
       {
         "numeroVol": "EK202",
@@ -42,7 +45,8 @@
         "aeroportArrivee": "Johannesburg (JNB)",
         "heureArrivee": "2025-05-04T07:10:00",
         "duree": "8h10",
-        "prix": 740
+        "prix": 740,
+        "id": 4
       },
       {
         "numeroVol": "SN601",
@@ -53,7 +57,20 @@
         "aeroportArrivee": "Casablanca (CMN)",
         "heureArrivee": "2025-05-05T13:00:00",
         "duree": "3h00",
-        "prix": 250
+        "prix": 250,
+        "id": 5
+      },
+      {
+        "numeroVol": "SN601",
+        "paysDepart": "Dakar",
+        "aeroportDepart": "Dakar Blaise Diagne (DSS)",
+        "heureDepart": "2025-05-05T10:00:00",
+        "paysArrivee": "Maroc",
+        "aeroportArrivee": "Casablanca (CMN)",
+        "heureArrivee": "2025-05-05T13:00:00",
+        "duree": "3h00",
+        "prix": 250,
+        "id": 6
       }
     ]
   }
