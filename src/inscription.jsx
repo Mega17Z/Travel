@@ -1,5 +1,5 @@
 import Foot from "./Components/Footer/foot";
-import Formulaire from "./Components/Formulaire/Formulaire";
+import Formulaire from "./components/Formulaire/Formulaire";
 
 const Inscription = () => {
     return ( 
