@@ -9,6 +9,7 @@ import RechercheVols from "./components/rechercheVol/rechercheVol";
 import MainTravel from "./components/MainTravel";
 import Vols from "./Components/travelCard/vols";
 import Formulaire from "./Components/Formulaire/Formulaire";
+import Connection from "./Components/connectionFormulaire/Connection";
 
 const MonAccueil = () => {
   return (
@@ -21,6 +22,7 @@ const MonAccueil = () => {
       {/* <Vols /> */}
       <Vols />
       <Formulaire />
+      <Connection />
       <Footer />
       {/* <Foot /> */}
     </div>
