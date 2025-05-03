@@ -1,3 +1,4 @@
+import Foot from "./Components/Footer/foot";
 import Formulaire from "./Components/Formulaire/Formulaire";
 
 const Inscription = () => {
@@ -5,6 +6,7 @@ const Inscription = () => {
         <div>
             <Formulaire />
             <Foot />
+            {/* <Foot /> */}
         </div>
      );
 }

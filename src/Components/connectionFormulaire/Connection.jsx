@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
 
 const Connection = () => {
   // État local pour stocker les données de connexion
@@ -68,6 +69,8 @@ const Connection = () => {
             Se connecter
           </Button>
         </div>
+
+        <p className="mt-2" style={{fontSize: "15px", color: "#040265", textAlign: "center"}}>Inscrivez vous si vous n'avez pas de compte: <Link to={"/inscription"} style={{textDecoration: "underline"}}>S'inscrire</Link></p>
       </Form>
     </div>
   );

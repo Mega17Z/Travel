@@ -81,7 +81,7 @@ const Navbar = () => {
               {/* {utilisateur ? (
                 <span className="text-primary fw-bold">Connecté</span>
               ) : ( */}
-                <Link to="/inscription">
+                <Link to="/connexion">
                 <button
                   className="btn rounded-5 text-white"
                   style={{ backgroundColor: "#040265" }}
