@@ -18,6 +18,7 @@ import Formulaire from "./components/Formulaire/Formulaire";
 // import ConnexionPage from "./connexion";
 import Login from "./components/Formulaire/Login";
 import { Reservations } from "./Components/Reservations/Reservations";
+import { BilletReservation } from "./components/BilletReservation/BilletsReserve";
 // import Vols from "./Components/travelCard/vols";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path="/inscription" element={<Formulaire />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Reservations" element={<Reservations />} />
+            <Route path="/pdfbillets" element={<BilletReservation />} />
           </Routes>
           {/* <InputSearch/> */}
           {/* <MainTravel/> */}
