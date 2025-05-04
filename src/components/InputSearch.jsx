@@ -7,11 +7,11 @@ const InputSearch = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://api.aviationstack.com/v1/flights?access_key=b58bae2ccd71dc1ce231a67e97df4a93")
+    fetch("http://localhost:9000/vols")
       .then((res) => res.json())
       .then((donnes) => {
         console.log("Données complètes de l'API :", donnes)
-        setVols(donnes.data)
+        setVols(donnes)
       })
         
       .catch((err) => console.error("Erreur API", err));

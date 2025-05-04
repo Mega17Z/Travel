@@ -52,7 +52,7 @@ const RechercheVols = () => {
                         <option value="9">9 Personnes</option>
                     </select>
                 </div> */}
-                <button type="submit">Recherche</button>
+                <button  type="submit">Recherche</button>
             </form>
         </div>
      );
