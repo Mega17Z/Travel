@@ -1,6 +1,8 @@
 .sectionDecouve{
     width: 90%;
-    margin: 4rem auto;
+    margin: 5rem auto !important;
+    /* margin-top: 6rem !important; */
+    /* margin-bottom: 5rem !important; */
 }
 
 .sectionDecouve h5{

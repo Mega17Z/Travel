@@ -1,5 +1,5 @@
 .footerSection{
-    margin-top: 2rem;
+    margin-top: 4.5rem;
     background-color: #040265;
     color: white;
     padding: 1rem 0;
@@ -28,8 +28,8 @@
     font-size: 14px;
 }
 
-.bloc h2, .bloc h3{
-    margin-bottom: 10px;
+.bloc h4, .bloc h5{
+    margin-bottom: 12px !important;
 }
 
 .bloc ul{
@@ -42,7 +42,7 @@
     position: relative;
 }
 
-.bloc ul li:before{
+.bloc ul li::before{
     content: '';
     top: 50%;
     transform: translateY(-50%);
@@ -71,8 +71,6 @@
         width: 145px;
     }
 }
-
-
 
 /* FootPage */
 

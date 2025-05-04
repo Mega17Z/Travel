@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "./AuthContext"
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import Foot from "../Footer/foot";
 
 const Login = () => {
   const { formData, updateFormData , resetFormData} = useContext(FormContext);
@@ -48,10 +49,14 @@ const Login = () => {
   };
 
   return (
+    <>
     <Form
       onSubmit={handleSubmit}
-      style={{ maxWidth: "500px" }}
-      className="container shadow my-3 py-4 flex-column rounded"
+      style={{ maxWidth: "500px",
+        paddingTop: "6rem",
+        paddingBottom: "2.9rem"
+       }}
+      className="container shadow flex-column rounded"
     >
       <h2 className="text-center">Connexion</h2>
 
@@ -87,6 +92,8 @@ const Login = () => {
 
       <p className="mt-2" style={{fontSize: "15px", color: "#040265", textAlign: "center"}}>Inscrivez vous si vous n'avez pas de compte: <Link to={"/inscription"} style={{textDecoration: "underline"}}>S'inscrire</Link></p>
     </Form>
+    <Foot />
+    </>
   );
 };
 

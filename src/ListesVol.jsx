@@ -2,6 +2,7 @@
 
 // import { useEffect, useState } from "react";
 // import CardSimule from "./components/simulation/simule";
+import Foot from "./Components/Footer/foot";
 import InputSearch from "./components/InputSearch";
 import RechercheVols from "./components/rechercheVol/rechercheVol";
 import Vols from "./Components/travelCard/vols";
@@ -45,9 +46,10 @@ const LesVols = () => {
             {/* <Vols tableau={monFilter} /> */}
             {
             monFilter.length === 0 ? <p style={{ textAlign: "center", marginTop: "2rem" }}>Aucun Vol Trouver ou Rechercher</p> : 
-            <Vols tableau={monFilter} />
+            <Vols tableau={monFilter} afficheButton={false} titre={"Recherches"} />
             }
-            {/* <Vols tableau={vols} /> */}
+            <Vols tableau={vols} afficheButton={false} titre={"Nos Vols"} />
+            <Foot />
         </div>
      );
 }

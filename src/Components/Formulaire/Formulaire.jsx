@@ -5,6 +5,7 @@ import FormContext from "./FormContext";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
+import Foot from "../Footer/foot";
 
 const Formulaire = () => {
   const { formData, updateFormData , resetFormData } = useContext(FormContext);
@@ -67,16 +68,18 @@ const Formulaire = () => {
   };
   
   return (
+    <>
     <Form
       onSubmit={handleSubmit}
       style={{
         maxWidth: "500px",
+        paddingTop: "5rem"
       }}
-      className="container shadow my-3 py-4 flex-column rounded"
+      className="container shadow flex-column rounded"
     >
       <h2 className="text-center">Formulaire d'inscription</h2>
       <div className="row">
-        <Form.Group className="col-12 col-md-6 mb-3" controlId="formBasicEmail">
+        <Form.Group className="col-12 col-md-6 mb-2" controlId="formBasicEmail">
           <Form.Label>Prenom</Form.Label>
           <Form.Control
             style={{
@@ -90,7 +93,7 @@ const Formulaire = () => {
             placeholder="Renseignez votre prénom"
           />
         </Form.Group>
-        <Form.Group className="col-12 col-md-6 mb-3" controlId="formBasicEmail">
+        <Form.Group className="col-12 col-md-6 mb-2" controlId="formBasicEmail">
           <Form.Label>Nom</Form.Label>
           <Form.Control
             style={{
@@ -106,7 +109,7 @@ const Formulaire = () => {
         </Form.Group>
       </div>
 
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-2" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
         <Form.Control
           style={{
@@ -121,7 +124,7 @@ const Formulaire = () => {
         />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-2" controlId="formBasicPassword">
         <Form.Label>Mot de passe</Form.Label>
         <Form.Control
           style={{
@@ -142,6 +145,8 @@ const Formulaire = () => {
 
       <p className="mt-2" style={{fontSize: "15px", color: "#040265", textAlign: "center"}}>Connectez-vous si vous avez un compte: <Link to={"/Login"} style={{textDecoration: "underline"}}>Se connecter</Link></p>
     </Form>
+    <Foot />
+    </>
   );
 };
 
