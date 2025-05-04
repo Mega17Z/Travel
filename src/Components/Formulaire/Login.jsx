@@ -5,6 +5,7 @@ import FormContext from "./FormContext";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "./AuthContext"
 import { toast } from "react-toastify";
+import Footer from "../Footer/footer";
 
 const Login = () => {
   const { formData, updateFormData , resetFormData} = useContext(FormContext);
@@ -47,6 +48,7 @@ const Login = () => {
   };
 
   return (
+    <>
     <Form
       onSubmit={handleSubmit}
       style={{ maxWidth: "500px" }}
@@ -84,6 +86,8 @@ const Login = () => {
         Se connecter
       </Button>
     </Form>
+    <Footer/>
+    </>
   );
 };
 

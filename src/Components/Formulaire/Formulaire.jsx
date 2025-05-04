@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import FormContext from "./FormContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
+import Footer from "../Footer/footer";
 
 const Formulaire = () => {
   const { formData, updateFormData , resetFormData } = useContext(FormContext);
@@ -66,6 +67,7 @@ const Formulaire = () => {
   };
   
   return (
+    <>
     <Form
       onSubmit={handleSubmit}
       style={{
@@ -139,6 +141,8 @@ const Formulaire = () => {
         Submit
       </Button>
     </Form>
+    <Footer/>
+    </>
   );
 };
 
