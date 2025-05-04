@@ -4,7 +4,7 @@
 // import CardSimule from "./components/simulation/simule";
 import InputSearch from "./components/InputSearch";
 import RechercheVols from "./components/rechercheVol/rechercheVol";
-import Vols from "./components/travelCard/vols";
+import Vols from "./Components/travelCard/vols";
 import useAffichageVols from "./components/useVols";
 import { useLocation } from "react-router-dom";
 // import Vols from "./Components/travelCard/vols";

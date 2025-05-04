@@ -10,14 +10,14 @@ import MainTravel from "./components/MainTravel";
 // import CardSimule from "./components/simulation/simule";
 // import { useEffect, useState } from "react";
 import useAffichageVols from "./components/useVols";
-import Vols from "./components/travelCard/vols";
+import Vols from "./Components/travelCard/vols";
 // import Vols from "./Components/travelCard/Vols";
 // import DetailsVols from "./components/DetailsVols/details";
 // import Vols from "./Components/travelCard/vols";
 // import Formulaire from "./Components/Formulaire/Formulaire";
 
 const MonAccueil = () => {
-    const { vols } = useAffichageVols(3)
+  const { vols } = useAffichageVols(3);
 
   return (
     <div>
@@ -26,13 +26,13 @@ const MonAccueil = () => {
       <MainTravel />
       <RechercheVols />
       <Decouvertes />
-            {/* <CardSimule tableau={vols} /> */}
-            {/* <Vols /> */}
+      {/* <CardSimule tableau={vols} /> */}
+      {/* <Vols /> */}
       {/* <Vols tableau={vols} /> */}
       {/* <DetailsVols /> */}
       <Vols tableau={vols} />
       {/* <Vols /> */}
-      <Vols />
+      {/* <Vols /> */}
       {/* <Formulaire /> */}
       <Footer />
       {/* <Foot /> */}

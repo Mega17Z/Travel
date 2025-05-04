@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FormContext from "./FormContext";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import Footer from "../Footer/footer";
@@ -140,6 +141,10 @@ const Formulaire = () => {
       <Button className="mx-auto px-5" variant="primary" type="submit">
         Submit
       </Button>
+
+      <p className="mt-2" style={{fontSize: "15px", color: "#040265", textAlign: "center"}}>
+        Connectez-vous si vous avez un compte: 
+        <Link to={"/Login"} style={{textDecoration: "underline"}}>Se connecter</Link></p>
     </Form>
     <Footer/>
     </>

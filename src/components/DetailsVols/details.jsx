@@ -145,7 +145,7 @@
 
 import './details.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import data from '../../../data/api.json';
+// import data from '../../../data/api.json';
 import { useEffect, useState } from 'react';
 
 const DetailsVols = () => {
@@ -154,8 +154,16 @@ const DetailsVols = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const volTrouve = data.vols.find((v) => v.id === parseInt(id));
-    setVol(volTrouve);
+    fetch('http://localhost:9000/vols')
+    .then(res => res.json())
+    .then(donner => {
+      console.log(donner)
+      const volTrouve = donner.find((v) => v.id === parseInt(id));
+      // const volTrouve = donner.vols.find((v) => v.id === parseInt(id));
+      console.log(volTrouve)
+      setVol(volTrouve);
+    })
+    // const volTrouve = data.vols
   }, [id]);
 
   const annuler = () => {
@@ -191,7 +199,7 @@ const DetailsVols = () => {
       };
 
     try {
-      const response = await fetch('http://192.168.68.194:3700/api/reservations', {
+      const response = await fetch('http://localhost:3700/api/reservations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -222,8 +230,8 @@ const DetailsVols = () => {
     <div className='details'>
       <div className="partDetails">
         <h5>{vol.paysDepart} - {vol.paysArrivee}</h5>
-        <h6>10 - 06 -2025</h6>
-        <p>{vol.duree}</p>
+        <h6>Date du jour: </h6>
+        <p>Durée: {vol.duree}</p>
       </div>
 
       <div className="informations">
@@ -241,15 +249,14 @@ const DetailsVols = () => {
       </div>
 
       <div className="supplementaire">
-        <h6><span className='titre'>Company</span> : <span className='special valeur'>Air France</span></h6>
-        <h6><span className='titre'>Numero de Vol</span> : <span className='valeur'>{vol.numeroVol}</span></h6>
-        <h6><span className='titre'>Prix</span> : <span>1x </span> <span className='valeur'>{vol.prix}</span></h6>
-        <h6><span className='titre'>Total</span> : <span className='valeur'>{vol.prix}</span><span>fr</span></h6>
+        <h6><span className='titre'>Company</span> <span className='special valeur'>{vol.compagnie}</span></h6>
+        <h6><span className='titre'>Numero de Vol</span> <span className='valeur'>{vol.numeroVol}</span></h6>
+        <h6><span className='titre'>Prix</span> <span className='valeur'>{vol.prix}</span></h6>
       </div>
 
       <div className='connfirmer'>
         <button onClick={annuler}>Annuler</button>
-        <button onClick={envoyerReservation}>Confirmer</button>
+        <button onClick={envoyerReservation}>Reserver</button>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FormContext from "./FormContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "./AuthContext"
 import { toast } from "react-toastify";
 import Footer from "../Footer/footer";
@@ -85,6 +85,11 @@ const Login = () => {
       <Button className="mx-auto px-5" variant="primary" type="submit">
         Se connecter
       </Button>
+
+      <p className="mt-2" style={{fontSize: "15px", color: "#040265", textAlign: "center"}}>
+        Inscrivez vous si vous n'avez pas de compte: 
+        <Link to={"/inscription"} style={{textDecoration: "underline"}}>S'inscrire</Link>
+        </p>
     </Form>
     <Footer/>
     </>

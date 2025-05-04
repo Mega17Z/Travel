@@ -37,7 +37,7 @@
 }
 
 .supplementaire{
-    margin: 15px 0;
+    /* margin: 15px 0; */
     color: #040265;
     display: flex;
     justify-content: space-between;
@@ -47,12 +47,16 @@
 
 .supplementaire h6{
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .supplementaire .titre{
     text-decoration: underline;
     /* opacity: 0.7; */
     color: black;
+    font-size: 13px;
 }
 
 .supplementaire .valeur{
