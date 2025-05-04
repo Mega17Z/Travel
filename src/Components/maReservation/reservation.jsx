@@ -12,6 +12,7 @@ const MaReservation = () => {
         fetch(`http://localhost:3700/api/reservations`)
         .then(res => res.json())
         .then(donner => {
+            console.log(donner)
             setReserve(donner)
         })
     }, [])

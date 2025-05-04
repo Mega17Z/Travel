@@ -139,19 +139,27 @@
 // export default DetailsVols;
 
 
-
+// import { useReservation } from '../../context/ReservationContext'; // adapte le chemin
 
 
 
 import './details.css';
 import { useNavigate, useParams } from 'react-router-dom';
 // import data from '../../../data/api.json';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { useReservation } from '../ReservationContext';
+// import FormContext from '../Formulaire/FormContext';
+
+
+
 
 const DetailsVols = () => {
   const { id } = useParams();
   const [vol, setVol] = useState(null);
   const navigate = useNavigate();
+
+  const { setReservation } = useReservation();
+  // const { formData } = useContext(FormContext)
 
   useEffect(() => {
     fetch('http://localhost:9000/vols')
@@ -170,57 +178,56 @@ const DetailsVols = () => {
     navigate('/');
   };
 
-  const envoyerReservation = async () => {
-    if (!vol) return;
+  const envoyerReservation = () => {
+    const tokenRecup = localStorage.getItem("token")
+    console.log(tokenRecup)
 
-    const reservationData = {
-        "nom": "Badji",
-        "prenom": "Naffisatou",
-        "email": "nafina@gmail.com",
-        "telephone": "+221786452310",
-        "vol": {
-          "numeroVols": "AR123",
-          "compagnie": "Air Senegal",
-          "depart": {
-            "villeDepart": "Dakar",
-            "dateDepart": "2025-06-10T10:30:00.000Z",
-            "aeroportDepart": "Aéroport Blaise Diagne"
+    if(tokenRecup === null){
+      alert('Vous devez creer un compte')
+    }
+    else{
+      const reservationData = {
+        nom: "formData.nom",
+        prenom: "formData.prenom",
+        email: "form?khqd",
+        telephone: "+221786452310",
+        vol: {
+          numeroVols: vol.numeroVol,
+          compagnie: vol.compagnie,
+          depart: {
+            villeDepart: vol.paysDepart,
+            dateDepart: vol.heureDepart,
+            aeroportDepart: vol.aeroportDepart
           },
-          "arrivee": {
-            "villeArrivee": "Paris",
-            "dateArrivee": "2025-06-10T14:00:00.000Z",
-            "aeroportArrivee": "Aéroport Charles de Gaulle"
+          arrivee: {
+            villeArrivee: vol.paysArrivee,
+            dateArrivee: vol.heureArrivee,
+            aeroportArrivee: vol.aeroportArrivee
           },
-          "classe": "Economy",
-          "prix": 420.50,
-          "statut": "En attente",
-          "duree":"4h"
-      }
+          classe: "Economy",
+          prix: vol.prix,
+          statut: "En attente",
+          duree: vol.duree
+        }
       };
 
-    try {
-      const response = await fetch('http://localhost:3700/api/reservations', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(reservationData)
-      });
+      fetch('http://192.168.68.194:3700/api/reservations', {
+                    method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(reservationData)
+      }).then(() => {
+                    console.log("Nouveau blog Ajouter")
+                    // setChargement(false)
+                    history('/Reservation')
+                }).catch(err => console.log(err))
 
-      if (!response.ok) {
-        throw new Error(`Erreur HTTP : ${response.status}`);
-      }
-
-      const result = await response.json();
-      console.log("Réservation réussie :", result);
-
-      // Rediriger vers la page de confirmation
-      navigate('/Reservation');
-    } catch (error) {
-      console.error("Erreur lors de l'envoi de la réservation :", error.message);
-      alert("La réservation a échoué. Veuillez réessayer.");
+      setReservation(reservationData); // On stocke dans le contexte
+      navigate('/Reservations')
     }
-  };
+    }
+  
+  
+  
 
   if (!vol) {
     return <p>Chargement en cours...</p>;

@@ -1,0 +1,74 @@
+.content{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #040265;
+    color: white;
+    padding: 15px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.form{
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.infos-personels,.infos-vol{
+    max-width: 100vh;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.infos-personels .inputs, .infos-vol .inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.infos-personels .inputs input, .infos-vol .inputs input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.form .btn{
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff !important;
+    color: #040265 !important;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form .btn:hover{
+    opacity: 0.8;
+    /* color: #fff !important; */
+}
+@media screen and (max-width: 768px) {
+    .infos-personels,.infos-vol{
+        flex-direction: column;
+    }
+    
+}
