@@ -213,16 +213,16 @@ const DetailsVols = () => {
 
       fetch('http://192.168.68.194:3700/api/reservations', {
                     method: 'POST',
-                    headers: {"Content-Type": "application/json"},
-                    body: JSON.stringify(reservationData)
-                }).then(() => {
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(reservationData)
+      }).then(() => {
                     console.log("Nouveau blog Ajouter")
                     // setChargement(false)
                     history('/Reservation')
                 }).catch(err => console.log(err))
 
       setReservation(reservationData); // On stocke dans le contexte
-      navigate('/Reservation')
+      navigate('/Reservations')
     }
     }
   

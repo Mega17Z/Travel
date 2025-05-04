@@ -1,8 +1,8 @@
 import "./Reservation.css"
 import { UseReservation } from "./UseContext/UseContext";
-export const Reservation = () => {
+export const Reservations = () => {
 
-const {reservation, handleChange} = UseReservation()
+// const {reservation, handleChange} = UseReservation()
 
 
   return <>
@@ -13,22 +13,22 @@ const {reservation, handleChange} = UseReservation()
     <div className="infos-personels">
         <div className="mb-2 inputs">
         <label htmlFor="nom">Nom</label>
-        <input type="text" name="nom" placeholder="Nom" className="" id="nom" value={reservation.nom} onChange={handleChange}/>
+        <input type="text" name="nom" placeholder="Nom" className="" id="nom"/>
         </div>
         <div className="mb-2 inputs">
         <label htmlFor="prenom">Prenom</label>
-        <input type="text" name="prenom" placeholder="Prenom" className="" id="prenom" value={reservation.prenom} onChange={handleChange} />
+        <input type="text" name="prenom" placeholder="Prenom" className="" id="prenom" />
         </div>
 
     </div>
     <div className="infos-personels">
         <div className="mb-2 inputs">
         <label htmlFor="email">E-mail</label>
-        <input type="email" name="email" placeholder="email" className="" id="email" value={reservation.email} onChange={handleChange} />
+        <input type="email" name="email" placeholder="email" className="" id="email" />
         </div>
         <div className="mb-2 inputs">
         <label htmlFor="telephone">Telephone</label>
-        <input type="number" name="telephone" placeholder="telephone" className="" id="telephone" value={reservation.telephone} onChange={handleChange} />
+        <input type="number" name="telephone" placeholder="telephone" className="" id="telephone" />
         </div>
     </div>
 
