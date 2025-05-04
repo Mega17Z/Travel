@@ -148,7 +148,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 // import data from '../../../data/api.json';
 import { useContext, useEffect, useState } from 'react';
 import { useReservation } from '../ReservationContext';
-import FormContext from '../Formulaire/FormContext';
+// import FormContext from '../Formulaire/FormContext';
 
 
 
@@ -159,7 +159,7 @@ const DetailsVols = () => {
   const navigate = useNavigate();
 
   const { setReservation } = useReservation();
-  const { formData } = useContext(FormContext)
+  // const { formData } = useContext(FormContext)
 
   useEffect(() => {
     fetch('http://localhost:9000/vols')
@@ -179,13 +179,17 @@ const DetailsVols = () => {
   };
 
   const envoyerReservation = () => {
-    if(formData.prenom !== ""){
+    const tokenRecup = localStorage.getItem("token")
+    console.log(tokenRecup)
+
+    if(tokenRecup === null){
       alert('Vous devez creer un compte')
-    }else{
+    }
+    else{
       const reservationData = {
-        nom: formData.nom,
-        prenom: formData.prenom,
-        email: formData.email,
+        nom: "formData.nom",
+        prenom: "formData.prenom",
+        email: "form?khqd",
         telephone: "+221786452310",
         vol: {
           numeroVols: vol.numeroVol,
@@ -207,7 +211,7 @@ const DetailsVols = () => {
         }
       };
 
-      fetch('http://localhost:3700/api/reservations', {
+      fetch('http://192.168.68.194:3700/api/reservations', {
                     method: 'POST',
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify(reservationData)
@@ -220,9 +224,10 @@ const DetailsVols = () => {
       setReservation(reservationData); // On stocke dans le contexte
       navigate('/Reservation')
     }
+    }
   
   
-  }
+  
 
   if (!vol) {
     return <p>Chargement en cours...</p>;

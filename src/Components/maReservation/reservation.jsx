@@ -9,6 +9,7 @@ const MaReservation = () => {
         fetch('http://192.168.68.194:3700/api/reservations')
         .then(res => res.json())
         .then(donner => {
+            console.log(donner)
             setReserve(donner)
         })
     }, [])

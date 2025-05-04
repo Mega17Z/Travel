@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
     if (!token) return;
 
     try {
-      const response = await fetch("http://localhost:3000/api/users/profile", {
+      const response = await fetch("http://localhost:3700/api/users/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
