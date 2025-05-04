@@ -158,9 +158,9 @@ const DetailsVols = () => {
     .then(res => res.json())
     .then(donner => {
       console.log(donner)
-      const volTrouve = donner.find((v) => v.id === parseInt(id));
+      const volTrouve = donner.find((v) => v.id === id);
       // const volTrouve = donner.vols.find((v) => v.id === parseInt(id));
-      console.log(volTrouve)
+      console.log("resultats vol  trouver ",volTrouve)
       setVol(volTrouve);
     })
     // const volTrouve = data.vols
@@ -194,8 +194,8 @@ const DetailsVols = () => {
           "classe": "Economy",
           "prix": 420.50,
           "statut": "En attente",
-          "duree": "4h"
-        }
+          "duree":"4h"
+      }
       };
 
     try {

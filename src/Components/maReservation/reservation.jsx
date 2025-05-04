@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import "./reservation.css"
 import PartReserve from "./partReserve";
+// import AuthContext from "../Formulaire/AuthContext";
 
 const MaReservation = () => {
     const [maReserve, setReserve] = useState([])
 
+    // const {url} = AuthContext()
+
     useEffect(() => {
-        fetch('http://192.168.68.194:3700/api/reservations')
+        fetch(`http://localhost:3700/api/reservations`)
         .then(res => res.json())
         .then(donner => {
             setReserve(donner)

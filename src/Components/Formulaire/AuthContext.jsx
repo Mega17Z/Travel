@@ -35,8 +35,9 @@ export const AuthProvider = ({ children }) => {
     fetchProfil();
   }, []);
 
+  const url = "http://localhost:3700"
   return (
-    <AuthContext.Provider value={{ utilisateur, setUtilisateur, fetchProfil, logout }}>
+    <AuthContext.Provider value={{ utilisateur, setUtilisateur, fetchProfil, logout,url }}>
       {children}
     </AuthContext.Provider>
   );
