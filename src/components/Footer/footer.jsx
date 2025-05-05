@@ -7,11 +7,11 @@ const Footer = () => {
         <div className="footerSection">
             <div className="leFooter">
                 <div className="bloc travleCompany">
-                    <h2>Travel Company</h2>
+                    <h4>Travel Company</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus deleniti modi nostrum quasi quaerat cumque voluptatum natus voluptatem et sit aut dicta, reiciendis ratione autem! Iure officia consequuntur veniam nostrum.</p>
                 </div>
                 <div className="bloc">
-                    <h3>Partenaires</h3>
+                    <h5>Partenaires</h5>
                     <ul>
                         <li>Air France</li>
                         <li>Air Senegal</li>
@@ -20,7 +20,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="bloc">
-                    <h3>Services</h3>
+                    <h5>Services</h5>
                     <ul>
                         <li>Assurance Voyage</li>
                         <li>Assitance Visa</li>
@@ -29,7 +29,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="bloc">
-                    <h3>Contact</h3>
+                    <h5>Contact</h5>
                     <ul>
                         <li>travelCompany@fly.sn</li>
                         <li>33 800 00 80</li>

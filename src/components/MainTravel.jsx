@@ -5,8 +5,8 @@ import "./navbar.css";
 const MainTravel = () => {
   return (
     <div className='moncontainer'>
-        <InputSearch/>
-      <div className='image mt-4'>
+        {/* <InputSearch/> */}
+      <div className='image'>
         <div className='d-flex justify-content-center align-items-center flex-column text-travel text-center'>
           <div className="trave-contain">
             <h3 className='mb-3'>Explorez Le Monde Avec TravelCompagny</h3>

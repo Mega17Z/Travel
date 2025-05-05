@@ -17,7 +17,7 @@ const RechercheVols = () => {
 
     return ( 
         <div className="sectionVol">
-            <h5>Acheter un billet</h5>
+            <h5>Rechercher de vol</h5>
             <form onSubmit={MyRecherche}>
                 {/* <div className="part">
                     <FiExternalLink />

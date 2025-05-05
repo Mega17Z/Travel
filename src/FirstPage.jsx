@@ -30,7 +30,7 @@ const MonAccueil = () => {
       {/* <Vols /> */}
       {/* <Vols tableau={vols} /> */}
       {/* <DetailsVols /> */}
-      <Vols tableau={vols} />
+      <Vols tableau={vols} afficheButton={true} titre={"Nos Vols"} />
       {/* <Vols /> */}
       {/* <Vols /> */}
       {/* <Formulaire /> */}

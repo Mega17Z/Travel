@@ -1,8 +1,10 @@
 import React from "react";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
 const discoverMore = ({ texte }) => {
   return (
+    <Link to={"/ListesVol"}>
     <button
       style={{
         width: "fit-content",
@@ -11,6 +13,7 @@ const discoverMore = ({ texte }) => {
     >
       {texte}
     </button>
+    </Link>
   );
 };
 

@@ -10,7 +10,8 @@ const VolsInfos = ({
   arriveLieu,
   arrivePays,
   arriveHeure,
-  id
+  id,
+  placesDisponibles
 }) => {
   return (
     <Link to={`/AfficheDetaiils/${id}`}>
@@ -43,7 +44,7 @@ const VolsInfos = ({
           <p className="text">{arriveHeure}</p>
         </div>
       </div>
-      <Reserve places="18" />
+      <Reserve places={placesDisponibles} />
     </div>
     </Link>
   );

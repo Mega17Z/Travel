@@ -1,6 +1,9 @@
 .sectionVol{
     width: 90%;
-    margin: 4rem auto !important;
+    /* margin-top: 4rem; */
+    padding-top: 10rem;
+    margin: auto;
+    /* margin: 4rem auto !important; */
 }
 
 .sectionVol h5{

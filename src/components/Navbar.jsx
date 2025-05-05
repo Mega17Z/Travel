@@ -15,12 +15,13 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <>
       {/* ==========================Navbar========================== */}
       <nav className="navbar navbar-expand-lg bg-white p-1">
-        <div className="container">
+        <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img src="/Logo (1).png" alt="" />
+            TravelCompany
+            {/* <img src="/Logo (1).png" alt="" /> */}
           </a>
           <button
             className="navbar-toggler"
@@ -33,7 +34,7 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse gap-5" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto gap-5  mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink
@@ -107,20 +108,20 @@ const Navbar = () => {
               ) : (
                 <>
                   <Link to="/login">
-                    <button className="btn btn-outline-primary">
+                    <button className="btn btn-outline-primary rounded-5">
                       Connexion
                     </button>
                   </Link>
-                  <Link to="/inscription">
+                  {/* <Link to="/inscription">
                     <button className="btn btn-primary">Inscription</button>
-                  </Link>
+                  </Link> */}
                 </>
               )}
             </div>
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 

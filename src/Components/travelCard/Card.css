@@ -10,6 +10,15 @@
 .lashadow{
   box-shadow: 2px 3px 5px #0402654a;
   border-radius: 5px;
+  border-bottom: 2px solid #0402659c !important;
+  border-top: 2px solid #0402659c !important;
+  border-left: 1px solid #0402654a !important;
+  border-right: 1px solid #0402654a !important;
+}
+
+.lashadow:hover{
+  box-shadow: -2px -2px 15px #04026559;
+  transition: all .3s ease-in-out;
 }
 
 button,
