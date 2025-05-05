@@ -1,7 +1,6 @@
-// import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import React, { useContext } from "react";
-import AuthContext from "../components/Formulaire/AuthContext";
+import AuthContext from "../Components/Formulaire/AuthContext";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -112,9 +111,6 @@ const Navbar = () => {
                       Connexion
                     </button>
                   </Link>
-                  {/* <Link to="/inscription">
-                    <button className="btn btn-primary">Inscription</button>
-                  </Link> */}
                 </>
               )}
             </div>

@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Foot } from "../footer/foot";
-import FormContext from "./FormContext";
-// import Foot from "../Footer/foot.jsx";
-// import Foot from "";
+import { FormContext } from "./FormContext";
+// import FormContext from "./FormContext.jsx";
+
 
 const Formulaire = () => {
 	const { formData, updateFormData, resetFormData } = useContext(FormContext);

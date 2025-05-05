@@ -1,4 +1,3 @@
-// import React from "react";
 import DiscoverMore from "./button";
 
 const Reserve = ({ places }) => {

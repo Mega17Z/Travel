@@ -1,9 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
-// Création du contexte
 const ReservationContext = createContext();
 
-// Provider pour englober l'app
 export const ReservationProvider = ({ children }) => {
   const [reservation, setReservation] = useState(null);
 
@@ -14,5 +12,4 @@ export const ReservationProvider = ({ children }) => {
   );
 };
 
-// Hook personnalisé pour utiliser le contexte facilement
 export const useReservation = () => useContext(ReservationContext);

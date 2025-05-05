@@ -4,21 +4,16 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import MonAccueil from "./FirstPage";
-import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LesVols from "./ListesVol";
 import Reservation from "./Reservation";
-// import InputSearch from './components/InputSearch'
-// import MainTravel from './components/MainTravel'
-
-// import MainTravel from './components/MainTravel'
-
 import Details from "./AfficheDetaiils";
 import Formulaire from "./components/Formulaire/Formulaire";
 // import ConnexionPage from "./connexion";
 import Login from "./components/Formulaire/Login";
 import { Reservations } from "./components/Reservations/Reservations";
 import { BilletReservation } from "./components/BilletReservation/BilletsReserve";
+import { Navbar } from "react-bootstrap";
 // import Vols from "./Components/travelCard/vols";
 
 function App() {
@@ -27,7 +22,7 @@ function App() {
     <ToastContainer position="top-right" autoClose={3000}/>
       <BrowserRouter>
        
-          <Navbar />
+       <Navbar />
           <Routes>
             <Route path="/" element={<MonAccueil />} />
             <Route path="/ListesVol" element={<LesVols />} />
@@ -38,8 +33,6 @@ function App() {
             <Route path="/Reservations" element={<Reservations />} />
             <Route path="/pdfbillets" element={<BilletReservation />} />
           </Routes>
-          {/* <InputSearch/> */}
-          {/* <MainTravel/> */}
       </BrowserRouter>
     </>
   );
