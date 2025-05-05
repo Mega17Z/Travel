@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import FormContext from "./formContext";
+import FormContext from "./FormContext";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "./AuthContext"
 import { toast } from "react-toastify";
