@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import MonAccueil from "./FirstPage";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LesVols from "./ListesVol";
 import Reservation from "./Reservation";
