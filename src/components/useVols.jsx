@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import AuthContext from "./Formulaire/AuthContext";
 
 const useAffichageVols = (limit = null) => {
     const [vols, setVols] = useState([]);
 
+    const {url} = useContext(AuthContext)
 
     useEffect(() => {
-        fetch(`http://localhost:3700/api/vols`)
+        fetch(`${url}/api/reservations`)
             .then((res) => res.json())
             .then((donner) => {
                 console.log(donner)

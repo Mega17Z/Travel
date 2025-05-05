@@ -49,7 +49,6 @@ const Formulaire = () => {
           email: formData.email,
           password: formData.password,
         }),
-        
       });
       console.log(formData);
 

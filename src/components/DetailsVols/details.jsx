@@ -211,7 +211,7 @@ const DetailsVols = () => {
         }
       };
 
-      fetch('http://192.168.68.194:3700/api/reservations', {
+      fetch(`http://${url}/api/reservations`, {
                     method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(reservationData)
