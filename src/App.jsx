@@ -8,12 +8,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LesVols from "./ListesVol";
 import Reservation from "./Reservation";
 import Details from "./AfficheDetaiils";
-import Formulaire from "./components/Formulaire/Formulaire";
-// import ConnexionPage from "./connexion";
 import Login from "./components/Formulaire/Login";
 import { Reservations } from "./components/Reservations/Reservations";
 import { BilletReservation } from "./components/BilletReservation/BilletsReserve";
 import { Navbar } from "react-bootstrap";
+import Formulaire from "./components/Formulaire/Formulaire";
 // import Vols from "./Components/travelCard/vols";
 
 function App() {
