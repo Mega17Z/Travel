@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
-const discoverMore = ({ texte }) => {
+const DiscoverMore = ({ texte }) => {
   return (
     <Link to={"/ListesVol"}>
     <button
@@ -17,4 +17,4 @@ const discoverMore = ({ texte }) => {
   );
 };
 
-export default discoverMore;
+export default DiscoverMore;

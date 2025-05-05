@@ -3,7 +3,7 @@ import "./footer.css";
 import footLogo from "../../assets/footLogo.png"
 
 
-const Foot = () => {
+export const Foot = () => {
     return ( 
         <div className="footPage">
             <img src={footLogo} alt="" />
@@ -11,4 +11,3 @@ const Foot = () => {
      );
 }
  
-export default Foot;

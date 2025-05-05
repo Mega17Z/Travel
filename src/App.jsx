@@ -17,7 +17,7 @@ import Details from "./AfficheDetaiils";
 import Formulaire from "./components/Formulaire/Formulaire";
 // import ConnexionPage from "./connexion";
 import Login from "./components/Formulaire/Login";
-import { Reservations } from "./Components/Reservations/Reservations";
+import { Reservations } from "./components/Reservations/Reservations";
 import { BilletReservation } from "./components/BilletReservation/BilletsReserve";
 // import Vols from "./Components/travelCard/vols";
 
