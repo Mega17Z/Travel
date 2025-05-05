@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import MonAccueil from "./FirstPage";
-import Navbar from "./Components/Navbar.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LesVols from "./ListesVol";
 import Reservation from "./Reservation";
@@ -13,6 +12,7 @@ import Formulaire from "./Components/Formulaire/Formulaire";
 import Login from "./Components/Formulaire/Login";
 import { Reservations } from "./Components/Reservations/Reservations";
 import { BilletReservation } from "./Components/BilletReservation/BilletsReserve";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
     <ToastContainer position="top-right" autoClose={3000}/>
       <BrowserRouter>
        
-          <Navbar />
+       <Navbar />
           <Routes>
             <Route path="/" element={<MonAccueil />} />
             <Route path="/ListesVol" element={<LesVols />} />
