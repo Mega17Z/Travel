@@ -1,4 +1,4 @@
-import Decouvertes from "./Components/Decouvertes/decouvertes";
+import Decouvertes from "./components/Decouvertes/decouvertes";
 import Footer from "./Components/Footer/footer";
 import RechercheVols from "./Components/rechercheVol/rechercheVol";
 import MainTravel from "./Components/MainTravel";
