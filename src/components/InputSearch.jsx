@@ -36,15 +36,16 @@ const InputSearch = () => {
       <div className="linput" >
         <form className="d-flex" role="search">
           <input
-            className="form-control mt-4 bg-white rounded-5"
+            className="form-control bg-white rounded-5"
             type="text"
             value={recherche}
             onChange={(e) => setRecherche(e.target.value)}
             placeholder="Recherche de Vols..."
           />
+        <button className="" onClick={handleRecherche}>
           <i className="bi bi-search" ></i>
+        </button>
         </form>
-          <button className="btn btn-info" onClick={handleRecherche}>Recherche</button>
       </div>
     </div>
   );
