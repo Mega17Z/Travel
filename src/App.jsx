@@ -9,32 +9,31 @@ import LesVols from "./ListesVol";
 import Reservation from "./Reservation";
 import Details from "./AfficheDetaiils";
 import { Navbar } from "react-bootstrap";
-import Formulaire from "./components/Formulaire/Formulaire";
-import Login from "./components/Formulaire/Login";
+import Formulaire from "./components/formulaire/Formulaire";
+import Login from "./components/formulaire/Login";
 import { Reservations } from "./components/Reservations/Reservations";
 import { BilletReservation } from "./components/BilletReservation/BilletsReserve";
 // import Vols from "./Components/travelCard/vols";
 
 function App() {
-  return (
-    <>
-    <ToastContainer position="top-right" autoClose={3000}/>
-      <BrowserRouter>
-       
-       <Navbar />
-          <Routes>
-            <Route path="/" element={<MonAccueil />} />
-            <Route path="/ListesVol" element={<LesVols />} />
-            <Route path="/Reservation" element={<Reservation />} />
-            <Route path="/AfficheDetaiils/:id" element={<Details />} />
-            <Route path="/inscription" element={<Formulaire />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Reservations" element={<Reservations />} />
-            <Route path="/pdfbillets" element={<BilletReservation />} />
-          </Routes>
-      </BrowserRouter>
-    </>
-  );
+	return (
+		<>
+			<ToastContainer position="top-right" autoClose={3000} />
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+					<Route path="/" element={<MonAccueil />} />
+					<Route path="/ListesVol" element={<LesVols />} />
+					<Route path="/Reservation" element={<Reservation />} />
+					<Route path="/AfficheDetaiils/:id" element={<Details />} />
+					<Route path="/inscription" element={<Formulaire />} />
+					<Route path="/Login" element={<Login />} />
+					<Route path="/Reservations" element={<Reservations />} />
+					<Route path="/pdfbillets" element={<BilletReservation />} />
+				</Routes>
+			</BrowserRouter>
+		</>
+	);
 }
 
 export default App;
