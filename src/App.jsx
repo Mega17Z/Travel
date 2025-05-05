@@ -4,22 +4,15 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import MonAccueil from "./FirstPage";
-import Navbar from "./components/Navbar";
+import Navbar from "./Components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LesVols from "./ListesVol";
 import Reservation from "./Reservation";
-// import InputSearch from './components/InputSearch'
-// import MainTravel from './components/MainTravel'
-
-// import MainTravel from './components/MainTravel'
-
 import Details from "./AfficheDetaiils";
-import Formulaire from "./components/Formulaire/Formulaire";
-// import ConnexionPage from "./connexion";
-import Login from "./components/Formulaire/Login";
+import Formulaire from "./Components/Formulaire/Formulaire";
+import Login from "./Components/Formulaire/Login";
 import { Reservations } from "./Components/Reservations/Reservations";
-import { BilletReservation } from "./components/BilletReservation/BilletsReserve";
-// import Vols from "./Components/travelCard/vols";
+import { BilletReservation } from "./Components/BilletReservation/BilletsReserve";
 
 function App() {
   return (
