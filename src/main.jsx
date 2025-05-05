@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { FormProvider } from "./Components/Formulaire/FormContext.jsx"
-import { AuthProvider } from './components/Formulaire/AuthContext.jsx'
+import { AuthProvider } from './Components/Formulaire/AuthContext.jsx'
 import { ReservationProvider } from './components/ReservationContext.jsx'
 
 createRoot(document.getElementById('root')).render(
