@@ -39,7 +39,8 @@ export const AuthProvider = ({ children }) => {
     fetchProfil();
   }, []);
 
-  const url = "http://localhost:3700"
+  // const url = "http://localhost:3700"
+  const url = "https://travel-backend-gzpr.onrender.com"
   return (
     <AuthContext.Provider value={{ utilisateur, setUtilisateur, fetchProfil, logout,url }}>
       {children}
