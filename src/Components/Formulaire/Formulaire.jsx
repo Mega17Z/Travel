@@ -5,7 +5,7 @@ import { FormContext } from "./FormContext";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
-import Foot from "./Footer/foot";
+// import Foot from "../Footer/foot";
 
 const Formulaire = () => {
   const { formData, updateFormData , resetFormData } = useContext(FormContext);
@@ -144,7 +144,7 @@ const Formulaire = () => {
 
       <p className="mt-2" style={{fontSize: "15px", color: "#040265", textAlign: "center"}}>Connectez-vous si vous avez un compte: <Link to={"/Login"} style={{textDecoration: "underline"}}>Se connecter</Link></p>
     </Form>
-    <Foot />
+    {/* <Foot /> */}
     </>
   );
 };
