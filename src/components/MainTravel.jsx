@@ -1,11 +1,9 @@
 import React from "react";
-import InputSearch from "./InputSearch";
 import "./navbar.css";
 
 const MainTravel = () => {
   return (
     <div className='moncontainer'>
-        {/* <InputSearch/> */}
       <div className='image'>
         <div className='d-flex justify-content-center align-items-center flex-column text-travel text-center'>
           <div className="trave-contain">

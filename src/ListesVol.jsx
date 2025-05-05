@@ -1,14 +1,9 @@
-// import { useLocation, useNavigate } from "react-router-dom";
-
-// import { useEffect, useState } from "react";
-// import CardSimule from "./components/simulation/simule";
 import Foot from "./Components/Footer/foot";
 import InputSearch from "./components/InputSearch";
-import RechercheVols from "./components/rechercheVol/rechercheVol";
+import RechercheVols from "./Components/rechercheVol/rechercheVol";
 import Vols from "./Components/travelCard/vols";
-import useAffichageVols from "./components/useVols";
+import useAffichageVols from "./Components/useVols";
 import { useLocation } from "react-router-dom";
-// import Vols from "./Components/travelCard/vols";
 
 const LesVols = () => {
     const { search } = useLocation()
@@ -18,7 +13,6 @@ const LesVols = () => {
     const destination = parametres.get("destination")
 
     const { vols } = useAffichageVols()
-    // console.log(vols)
 
     const monFilter = (!depart && !destination) ? [] : vols.filter((vol) => {
       const departMatch = depart
@@ -35,15 +29,12 @@ const LesVols = () => {
     });
 
 
-    // console.log(monFilter)
     
 
     return ( 
         <div className="lareserve">
             <InputSearch />
             <RechercheVols />
-            {/* <Vols tableau={monFilter} /> */}
-            {/* <Vols tableau={monFilter} /> */}
             {
             monFilter.length === 0 ? <p style={{ textAlign: "center", marginTop: "2rem" }}>Aucun Vol Trouver ou Rechercher</p> : 
             <Vols tableau={monFilter} afficheButton={false} titre={"Recherches"} />

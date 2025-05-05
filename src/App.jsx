@@ -31,8 +31,6 @@ function App() {
             <Route path="/Reservations" element={<Reservations />} />
             <Route path="/pdfbillets" element={<BilletReservation />} />
           </Routes>
-          {/* <InputSearch/> */}
-          {/* <MainTravel/> */}
       </BrowserRouter>
     </>
   );
