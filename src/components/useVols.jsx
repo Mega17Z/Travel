@@ -7,7 +7,7 @@ const useAffichageVols = (limit = null) => {
     const {url} = useContext(AuthContext)
 
     useEffect(() => {
-        fetch(`${url}/api/reservations`)
+        fetch(`${url}/api/vols`)
             .then((res) => res.json())
             .then((donner) => {
                 console.log(donner)

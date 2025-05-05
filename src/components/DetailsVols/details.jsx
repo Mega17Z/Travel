@@ -148,6 +148,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 // import data from '../../../data/api.json';
 import { useContext, useEffect, useState } from 'react';
 import { useReservation } from '../ReservationContext';
+import AuthContext from '../Formulaire/AuthContext';
 // import FormContext from '../Formulaire/FormContext';
 
 
@@ -161,13 +162,15 @@ const DetailsVols = () => {
   const { setReservation } = useReservation();
   // const { formData } = useContext(FormContext)
 
+  const {url} = useContext(AuthContext)
+
   useEffect(() => {
-    fetch('http://localhost:9000/vols')
+    fetch(`${url}/api/vols`)
     .then(res => res.json())
     .then(donner => {
       console.log(donner)
-      const volTrouve = donner.find((v) => v.id === id);
-      // const volTrouve = donner.vols.find((v) => v.id === parseInt(id));
+      // const volTrouve = donner.find((v) => v.id === id);
+      const volTrouve = donner.find((v) => v.id === parseInt(id));
       console.log("resultats vol  trouver ",volTrouve)
       setVol(volTrouve);
     })
