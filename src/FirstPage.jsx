@@ -3,7 +3,7 @@ import Footer from "./Components/Footer/footer";
 import RechercheVols from "./Components/rechercheVol/rechercheVol";
 import MainTravel from "./Components/MainTravel";
 import useAffichageVols from "./Components/useVols";
-import Vols from "./components/travelCard/vols";
+import Vols from "./Components/travelCard/vols";
 
 const MonAccueil = () => {
   const { vols } = useAffichageVols(3);
